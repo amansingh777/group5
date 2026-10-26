@@ -2,20 +2,35 @@
 // is approved (tool ran) or a git commit succeeds. Never blocks work.
 const fs = require("fs");
 const path = require("path");
+const os = require("os");
 const { execSync } = require("child_process");
 
 const JOURNAL = path.join("docs", "prompt-journal.md");
 
+// Fallback when the hook input has no transcript_path: newest transcript
+// for this project under ~/.claude/projects (e.g. C:\Users\me\app -> c--Users-me-app)
+function newestTranscript() {
+  const slug = process.cwd().replace(/[:\\/]/g, "-");
+  const dir = path.join(os.homedir(), ".claude", "projects", slug);
+  const files = fs.readdirSync(dir).filter(f => f.endsWith(".jsonl"))
+    .map(f => path.join(dir, f))
+    .sort((a, b) => fs.statSync(b).mtimeMs - fs.statSync(a).mtimeMs);
+  return files[0];
+}
+
 function lastPrompt(transcript) {
   try {
-    const lines = fs.readFileSync(transcript, "utf8").trim().split("\n");
+    const lines = fs.readFileSync(transcript || newestTranscript(), "utf8").trim().split("\n");
     for (let i = lines.length - 1; i >= 0; i--) {
       const m = JSON.parse(lines[i]);
       if (m.type !== "user" || m.isMeta) continue;
       const c = m.message && m.message.content;
-      const text = typeof c === "string" ? c
-        : Array.isArray(c) ? c.filter(p => p.type === "text").map(p => p.text).join(" ") : "";
-      if (text && !text.startsWith("<")) return text.split("\n")[0].slice(0, 200);
+      const raw = typeof c === "string" ? c
+        : Array.isArray(c) ? c.filter(p => p.type === "text").map(p => p.text).join("\n") : "";
+      // drop injected blocks (IDE context, reminders, command output), keep what the user typed
+      const text = raw.replace(/<(ide_\w+|system-reminder|local-command-\w+|command-\w+)>[\s\S]*?<\/\1>/g, "").trim();
+      if (!text || text.startsWith("[Request interrupted")) continue;
+      return text.split("\n")[0].slice(0, 200);
     }
   } catch (e) {}
   return "(unknown)";

@@ -1,0 +1,14 @@
+:root { font-family: system-ui, sans-serif; color: #1c2430; background: #f5f7fa; }
+body { margin: 0; }
+.topbar { display: flex; gap: 2rem; align-items: center; padding: 0.75rem 1.5rem; background: #12355b; color: #fff; }
+.topbar nav { display: flex; gap: 1rem; }
+.topbar a { color: #cfe3f7; text-decoration: none; }
+.topbar a.active { color: #fff; font-weight: 600; border-bottom: 2px solid #fff; }
+main { padding: 1.5rem; }
+table { width: 100%; border-collapse: collapse; margin-top: 1rem; background: #fff; }
+th, td { text-align: left; padding: 0.5rem 0.75rem; border-bottom: 1px solid #e2e8f0; }
+th { background: #eef2f7; }
+.state { margin-top: 1rem; color: #4a5568; }
+.state.error { color: #b42318; }
+.pager { display: flex; gap: 1rem; align-items: center; margin-top: 1rem; }
+button { padding: 0.4rem 0.9rem; }

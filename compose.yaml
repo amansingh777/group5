@@ -1,0 +1,15 @@
+services:
+  mysql:
+    image: mysql:8.4
+    environment:
+      MYSQL_ROOT_PASSWORD: "Corrin!Root2026"
+      MYSQL_DATABASE: corrin
+    ports:
+      - "3306:3306"
+
+  api:
+    build: ./backend
+    ports:
+      - "5080:5080"
+    environment:
+      ConnectionStrings__Default: "Server=mysql;Port=3306;Database=corrin;User ID=corrin_app;Password=Corrin!App2026;"

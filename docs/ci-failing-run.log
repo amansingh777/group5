@@ -1,0 +1,33 @@
+2026-10-22T09:14:03.1182740Z ##[group]Run actions/checkout@v4
+2026-10-22T09:14:03.4421090Z Syncing repository: corrin-utilities/corrin-field-service
+2026-10-22T09:14:04.8820113Z ##[endgroup]
+2026-10-22T09:14:05.2209918Z ##[group]Run actions/setup-dotnet@v4
+2026-10-22T09:14:05.2214470Z with:
+2026-10-22T09:14:05.2215012Z   dotnet-version: 6.0.x
+2026-10-22T09:14:05.2215390Z ##[endgroup]
+2026-10-22T09:14:06.9930217Z Installed version 6.0.428
+2026-10-22T09:14:07.5528811Z ##[group]Run dotnet restore
+2026-10-22T09:14:07.5530001Z   dotnet restore
+2026-10-22T09:14:07.5531200Z   shell: /usr/bin/bash -e {0}
+2026-10-22T09:14:07.5531760Z ##[endgroup]
+2026-10-22T09:14:09.1175520Z /usr/share/dotnet/sdk/6.0.428/Sdks/Microsoft.NET.Sdk/targets/Microsoft.NET.TargetFrameworkInference.targets(144,5): error NETSDK1045: The current .NET SDK does not support targeting .NET 8.0.  Either target .NET 6.0 or lower, or use a version of the .NET SDK that supports .NET 8.0. Download the .NET SDK from https://aka.ms/dotnet/download [/home/runner/work/corrin-field-service/corrin-field-service/backend/Corrin.Api/Corrin.Api.csproj]
+2026-10-22T09:14:09.1189034Z /usr/share/dotnet/sdk/6.0.428/Sdks/Microsoft.NET.Sdk/targets/Microsoft.NET.TargetFrameworkInference.targets(144,5): error NETSDK1045: The current .NET SDK does not support targeting .NET 8.0.  Either target .NET 6.0 or lower, or use a version of the .NET SDK that supports .NET 8.0. Download the .NET SDK from https://aka.ms/dotnet/download [/home/runner/work/corrin-field-service/corrin-field-service/backend/Corrin.Tests/Corrin.Tests.csproj]
+2026-10-22T09:14:09.1342281Z ##[error]Process completed with exit code 1.
+2026-10-22T09:14:09.2051177Z Post job cleanup.
+2026-10-22T09:14:09.4430812Z Cleaning up orphan processes
+
+2026-10-22T09:14:03.0987112Z ##[group]Run actions/checkout@v4
+2026-10-22T09:14:03.3920141Z Syncing repository: corrin-utilities/corrin-field-service
+2026-10-22T09:14:04.7711302Z ##[endgroup]
+2026-10-22T09:14:05.1021774Z ##[group]Run actions/setup-node@v4
+2026-10-22T09:14:05.1023300Z with:
+2026-10-22T09:14:05.1023851Z   node-version: 20
+2026-10-22T09:14:06.3318820Z Found in cache @ /opt/hostedtoolcache/node/20.18.0/x64
+2026-10-22T09:14:06.5502716Z ##[endgroup]
+2026-10-22T09:14:06.6208841Z ##[group]Run npm ci
+2026-10-22T09:14:06.6209977Z   npm ci
+2026-10-22T09:14:06.6210510Z   shell: /usr/bin/bash -e {0}
+2026-10-22T09:14:06.6211022Z ##[endgroup]
+2026-10-22T09:14:06.6330190Z ##[error]An error occurred trying to start process '/usr/bin/bash' with working directory '/home/runner/work/corrin-field-service/corrin-field-service/web'. No such file or directory
+2026-10-22T09:14:06.7014420Z Post job cleanup.
+2026-10-22T09:14:06.8820993Z Cleaning up orphan processes

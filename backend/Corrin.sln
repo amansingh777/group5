@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Corrin.Api", "Corrin.Api\Corrin.Api.csproj", "{464DF958-6E7B-4989-B16E-BF659651F58F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Corrin.Tests", "Corrin.Tests\Corrin.Tests.csproj", "{10E2921C-36CF-4D87-BE42-12F8F9B265CD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{464DF958-6E7B-4989-B16E-BF659651F58F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{464DF958-6E7B-4989-B16E-BF659651F58F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{464DF958-6E7B-4989-B16E-BF659651F58F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{464DF958-6E7B-4989-B16E-BF659651F58F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{10E2921C-36CF-4D87-BE42-12F8F9B265CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10E2921C-36CF-4D87-BE42-12F8F9B265CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10E2921C-36CF-4D87-BE42-12F8F9B265CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10E2921C-36CF-4D87-BE42-12F8F9B265CD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

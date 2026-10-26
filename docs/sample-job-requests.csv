@@ -1,0 +1,15 @@
+customer_ref,site_postcode,job_type,priority,requested_date,description
+CUS-10007,LS6 3TZ,BOILER_SERVICE,P3,2026-10-12,Annual service due
+CUS-10021,M14 3XT,BOILER_REPAIR,urgent,05/10/2026,No hot water since Sunday
+CUS-10028,EX6 8XH,METER_FAULT,P2,2026-10-08,"Display blank, reads zero"
+CUS-10035,le2 8es,SAFETY_CHECK,,2026-10-14,Landlord certificate needed
+CUS-10042,B17 8JB,SMART_UPGRADE,P3,2026-10-20,
+CUS-10049,L8 7PZ,BOILER_SERVICE,P3,2026-10-12,Tenant says boiler is in the loft
+CUS-99999,M1 1AA,BOILER_SERVICE,P3,2026-10-12,Account not found
+CUS-10056,E9 1RA,BOILER_SERVICE,P9,2026-10-12,Priority typo
+
+CUS-10063,L11 7BN,BOILER_SERVICE,P3,31/31/2026,Date typed wrongly
+CUS-10070,NE3 3EU,BOILER_TUNE,P3,2026-10-12,Unknown job type
+CUS-10077,L8 9WG,HP_SURVEY,P3,2026-10-15,"Interested in ""air source"" option"
+CUS-10084,YO10 2NZ,BOILER_SERVICE,P3,2026-10-13,Service due
+CUS-10007,LS6 3TZ,BOILER_SERVICE,P3,2026-10-12,Second request for the same site

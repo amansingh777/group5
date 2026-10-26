@@ -15,6 +15,7 @@ Internal tool for dispatchers and managers at Corrin Utility Services.
 - Run tests: `dotnet test tests/Corrin.Api.Tests`
 - Run web: `cd client && yarn && yarn start`
 - Test web: `npm test`
+- Review session history and suggest skills/agents/hooks: `/reflect` (writes `docs/ai-usage-reflection.md`)
 - Database changes: `dotnet ef migrations add <Name>` then `dotnet ef database update`
 
 ## Conventions

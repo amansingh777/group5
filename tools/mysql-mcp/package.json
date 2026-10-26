@@ -1,0 +1,22 @@
+{
+  "name": "corrin-mysql-mcp",
+  "version": "1.0.0",
+  "description": "Read-only MySQL MCP server for querying the Corrin database",
+  "type": "module",
+  "private": true,
+  "main": "index.js",
+  "bin": {
+    "corrin-mysql-mcp": "index.js"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "mysql2": "^3.11.0",
+    "zod": "^3.23.0"
+  }
+}

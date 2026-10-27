@@ -209,3 +209,1093 @@
 - Prompt: create only e2e-browser-check and test-writer
 - Change: Write .claude/agents/test-writer.md
 - Outcome: approved
+
+## Entry 43 - 2026-10-27 06:49 (commit)
+- Prompt: commit the changes
+- Change: commit 547f29f Fix CUS-19: utilisation uses rostered hours, add e2e and test agents
+- Outcome: committed
+
+## Entry 44 - 2026-10-27 06:49 (edit)
+- Prompt: commit the changes
+- Change: Edit CLAUDE.md
+- Outcome: approved
+
+## Entry 45 - 2026-10-27 14:40 (edit)
+- Prompt: continue with phase 3
+- Change: Edit backend/Corrin.Api/Dtos/Dtos.cs
+- Outcome: approved
+
+## Entry 46 - 2026-10-27 14:40 (edit)
+- Prompt: continue with phase 3
+- Change: Edit backend/Corrin.Api/Mappers/Mappers.cs
+- Outcome: approved
+
+## Entry 47 - 2026-10-27 14:40 (edit)
+- Prompt: continue with phase 3
+- Change: Edit backend/Corrin.Api/Validators/Validators.cs
+- Outcome: approved
+
+## Entry 48 - 2026-10-27 14:40 (edit)
+- Prompt: continue with phase 3
+- Change: Edit backend/Corrin.Api/Program.cs
+- Outcome: approved
+
+## Entry 49 - 2026-10-27 14:40 (edit)
+- Prompt: continue with phase 3
+- Change: Edit backend/Corrin.Api/Program.cs
+- Outcome: approved
+
+## Entry 50 - 2026-10-27 14:40 (edit)
+- Prompt: continue with phase 3
+- Change: Edit backend/Corrin.Api/Controllers/WorkOrdersController.cs
+- Outcome: approved
+
+## Entry 51 - 2026-10-27 14:40 (edit)
+- Prompt: continue with phase 3
+- Change: Edit backend/Corrin.Api/Controllers/WorkOrdersController.cs
+- Outcome: approved
+
+## Entry 52 - 2026-10-27 14:40 (edit)
+- Prompt: continue with phase 3
+- Change: Write backend/Corrin.Api/Repositories/VisitRepository.cs
+- Outcome: approved
+
+## Entry 53 - 2026-10-27 14:40 (edit)
+- Prompt: continue with phase 3
+- Change: Write backend/Corrin.Api/Services/WorkOrderVisitService.cs
+- Outcome: approved
+
+## Entry 54 - 2026-10-27 14:40 (edit)
+- Prompt: continue with phase 3
+- Change: Edit backend/Corrin.Api/Repositories/JobRepository.cs
+- Outcome: approved
+
+## Entry 55 - 2026-10-27 14:44 (edit)
+- Prompt: continue with phase 3
+- Change: Edit backend/Corrin.Api/Controllers/ReportsController.cs
+- Outcome: approved
+
+## Entry 56 - 2026-10-27 14:44 (edit)
+- Prompt: continue with phase 3
+- Change: Edit backend/Corrin.Api/Controllers/ReportsController.cs
+- Outcome: approved
+
+## Entry 57 - 2026-10-27 14:44 (edit)
+- Prompt: continue with phase 3
+- Change: Edit backend/Corrin.Api/Program.cs
+- Outcome: approved
+
+## Entry 58 - 2026-10-27 14:49 (edit)
+- Prompt: continue with phase 3
+- Change: Write backend/Corrin.Tests/WorkOrderVisitServiceTests.cs
+- Outcome: approved
+
+## Entry 59 - 2026-10-27 14:49 (edit)
+- Prompt: continue with phase 3
+- Change: Edit backend/Corrin.Tests/WorkOrderVisitServiceTests.cs
+- Outcome: approved
+
+## Entry 60 - 2026-10-27 14:49 (edit)
+- Prompt: continue with phase 3
+- Change: Edit backend/Corrin.Tests/WorkOrderVisitServiceTests.cs
+- Outcome: approved
+
+## Entry 61 - 2026-10-27 14:49 (edit)
+- Prompt: continue with phase 3
+- Change: Edit backend/Corrin.Tests/WorkOrderVisitServiceTests.cs
+- Outcome: approved
+
+## Entry 62 - 2026-10-27 14:49 (edit)
+- Prompt: continue with phase 3
+- Change: Edit backend/Corrin.Tests/WorkOrderVisitServiceTests.cs
+- Outcome: approved
+
+## Entry 63 - 2026-10-27 14:49 (edit)
+- Prompt: continue with phase 3
+- Change: Write backend/Corrin.Tests/FirstTimeFixServiceTests.cs
+- Outcome: approved
+
+## Entry 64 - 2026-10-27 14:50 (edit)
+- Prompt: continue with phase 3
+- Change: Write backend/Corrin.Tests/FirstTimeFixRepositoryTests.cs
+- Outcome: approved
+
+## Entry 65 - 2026-10-27 14:50 (edit)
+- Prompt: continue with phase 3
+- Change: Write backend/Corrin.Tests/FirstTimeFixApiTests.cs
+- Outcome: approved
+
+## Entry 66 - 2026-10-27 14:50 (edit)
+- Prompt: continue with phase 3
+- Change: Edit backend/Corrin.Tests/WorkOrderApiTests.cs
+- Outcome: approved
+
+## Entry 67 - 2026-10-27 14:54 (edit)
+- Prompt: do the cleanup then start phase 4
+- Change: Edit backend/Corrin.Api/Services/WorkOrderSchedulingService.cs
+- Outcome: approved
+
+## Entry 68 - 2026-10-27 14:54 (edit)
+- Prompt: do the cleanup then start phase 4
+- Change: Edit backend/Corrin.Api/Services/WorkOrderSchedulingService.cs
+- Outcome: approved
+
+## Entry 69 - 2026-10-27 14:54 (edit)
+- Prompt: do the cleanup then start phase 4
+- Change: Edit backend/Corrin.Api/Services/WorkOrderSchedulingService.cs
+- Outcome: approved
+
+## Entry 70 - 2026-10-27 14:54 (edit)
+- Prompt: do the cleanup then start phase 4
+- Change: Edit backend/Corrin.Api/Services/WorkOrderSchedulingService.cs
+- Outcome: approved
+
+## Entry 71 - 2026-10-27 14:54 (edit)
+- Prompt: do the cleanup then start phase 4
+- Change: Edit backend/Corrin.Api/Services/WorkOrderSchedulingService.cs
+- Outcome: approved
+
+## Entry 72 - 2026-10-27 14:54 (edit)
+- Prompt: do the cleanup then start phase 4
+- Change: Edit backend/Corrin.Api/Repositories/JobRepository.cs
+- Outcome: approved
+
+## Entry 73 - 2026-10-27 14:54 (edit)
+- Prompt: do the cleanup then start phase 4
+- Change: Edit backend/Corrin.Api/Repositories/JobRepository.cs
+- Outcome: approved
+
+## Entry 74 - 2026-10-27 14:55 (edit)
+- Prompt: do the cleanup then start phase 4
+- Change: Edit backend/Corrin.Api/Services/WorkOrderAllocationService.cs
+- Outcome: approved
+
+## Entry 75 - 2026-10-27 14:55 (edit)
+- Prompt: do the cleanup then start phase 4
+- Change: Edit backend/Corrin.Api/Services/WorkOrderVisitService.cs
+- Outcome: approved
+
+## Entry 76 - 2026-10-27 14:55 (edit)
+- Prompt: do the cleanup then start phase 4
+- Change: Edit backend/Corrin.Api/Services/WorkOrderVisitService.cs
+- Outcome: approved
+
+## Entry 77 - 2026-10-27 14:55 (edit)
+- Prompt: do the cleanup then start phase 4
+- Change: Edit backend/Corrin.Api/Services/WorkOrderVisitService.cs
+- Outcome: approved
+
+## Entry 78 - 2026-10-27 14:55 (edit)
+- Prompt: do the cleanup then start phase 4
+- Change: Edit backend/Corrin.Api/Services/JobService.cs
+- Outcome: approved
+
+## Entry 79 - 2026-10-27 14:55 (edit)
+- Prompt: do the cleanup then start phase 4
+- Change: Edit backend/Corrin.Api/Validators/Validators.cs
+- Outcome: approved
+
+## Entry 80 - 2026-10-27 14:56 (edit)
+- Prompt: do the cleanup then start phase 4
+- Change: Edit docs/specs/work-orders.md
+- Outcome: approved
+
+## Entry 81 - 2026-10-27 14:56 (edit)
+- Prompt: do the cleanup then start phase 4
+- Change: Edit docs/specs/work-orders.md
+- Outcome: approved
+
+## Entry 82 - 2026-10-27 14:56 (edit)
+- Prompt: do the cleanup then start phase 4
+- Change: Edit docs/specs/work-orders.md
+- Outcome: approved
+
+## Entry 83 - 2026-10-27 14:56 (edit)
+- Prompt: do the cleanup then start phase 4
+- Change: Edit docs/specs/work-orders.md
+- Outcome: approved
+
+## Entry 84 - 2026-10-27 14:56 (edit)
+- Prompt: do the cleanup then start phase 4
+- Change: Edit docs/specs/work-orders.md
+- Outcome: approved
+
+## Entry 85 - 2026-10-27 14:56 (edit)
+- Prompt: do the cleanup then start phase 4
+- Change: Edit docs/specs/work-orders.md
+- Outcome: approved
+
+## Entry 86 - 2026-10-27 14:56 (edit)
+- Prompt: do the cleanup then start phase 4
+- Change: Edit docs/specs/work-orders.md
+- Outcome: approved
+
+## Entry 87 - 2026-10-27 14:56 (edit)
+- Prompt: do the cleanup then start phase 4
+- Change: Edit docs/specs/work-orders.md
+- Outcome: approved
+
+## Entry 88 - 2026-10-27 14:56 (edit)
+- Prompt: do the cleanup then start phase 4
+- Change: Edit docs/specs/work-orders.md
+- Outcome: approved
+
+## Entry 89 - 2026-10-27 14:56 (edit)
+- Prompt: do the cleanup then start phase 4
+- Change: Edit docs/specs/work-orders.md
+- Outcome: approved
+
+## Entry 90 - 2026-10-27 14:56 (edit)
+- Prompt: do the cleanup then start phase 4
+- Change: Edit docs/specs/work-orders.md
+- Outcome: approved
+
+## Entry 91 - 2026-10-27 14:56 (edit)
+- Prompt: do the cleanup then start phase 4
+- Change: Edit docs/specs/work-orders.md
+- Outcome: approved
+
+## Entry 92 - 2026-10-27 14:56 (edit)
+- Prompt: do the cleanup then start phase 4
+- Change: Edit docs/specs/work-orders.md
+- Outcome: approved
+
+## Entry 93 - 2026-10-27 14:56 (edit)
+- Prompt: do the cleanup then start phase 4
+- Change: Edit docs/specs/work-orders.md
+- Outcome: approved
+
+## Entry 94 - 2026-10-27 14:59 (edit)
+- Prompt: do the cleanup then start phase 4
+- Change: Edit backend/Corrin.Tests/WorkOrderServiceTests.cs
+- Outcome: approved
+
+## Entry 95 - 2026-10-27 14:59 (edit)
+- Prompt: do the cleanup then start phase 4
+- Change: Edit backend/Corrin.Tests/WorkOrderServiceTests.cs
+- Outcome: approved
+
+## Entry 96 - 2026-10-27 14:59 (edit)
+- Prompt: do the cleanup then start phase 4
+- Change: Edit backend/Corrin.Tests/WorkOrderServiceTests.cs
+- Outcome: approved
+
+## Entry 97 - 2026-10-27 14:59 (edit)
+- Prompt: do the cleanup then start phase 4
+- Change: Edit backend/Corrin.Tests/WorkOrderServiceTests.cs
+- Outcome: approved
+
+## Entry 98 - 2026-10-27 14:59 (edit)
+- Prompt: do the cleanup then start phase 4
+- Change: Edit backend/Corrin.Tests/WorkOrderServiceTests.cs
+- Outcome: approved
+
+## Entry 99 - 2026-10-27 14:59 (edit)
+- Prompt: do the cleanup then start phase 4
+- Change: Edit backend/Corrin.Tests/WorkOrderServiceTests.cs
+- Outcome: approved
+
+## Entry 100 - 2026-10-27 14:59 (edit)
+- Prompt: do the cleanup then start phase 4
+- Change: Edit backend/Corrin.Tests/WorkOrderServiceTests.cs
+- Outcome: approved
+
+## Entry 101 - 2026-10-27 14:59 (edit)
+- Prompt: do the cleanup then start phase 4
+- Change: Edit backend/Corrin.Tests/WorkOrderServiceTests.cs
+- Outcome: approved
+
+## Entry 102 - 2026-10-27 15:00 (edit)
+- Prompt: do the cleanup then start phase 4
+- Change: Edit backend/Corrin.Tests/WorkOrderVisitServiceTests.cs
+- Outcome: approved
+
+## Entry 103 - 2026-10-27 15:00 (edit)
+- Prompt: do the cleanup then start phase 4
+- Change: Edit backend/Corrin.Tests/WorkOrderVisitServiceTests.cs
+- Outcome: approved
+
+## Entry 104 - 2026-10-27 15:00 (edit)
+- Prompt: do the cleanup then start phase 4
+- Change: Edit backend/Corrin.Tests/WorkOrderVisitServiceTests.cs
+- Outcome: approved
+
+## Entry 105 - 2026-10-27 15:00 (edit)
+- Prompt: do the cleanup then start phase 4
+- Change: Write backend/Corrin.Tests/ShiftBreakTests.cs
+- Outcome: approved
+
+## Entry 106 - 2026-10-27 15:00 (edit)
+- Prompt: do the cleanup then start phase 4
+- Change: Write backend/Corrin.Tests/JobUpdateRequestValidatorTests.cs
+- Outcome: approved
+
+## Entry 107 - 2026-10-27 15:00 (edit)
+- Prompt: do the cleanup then start phase 4
+- Change: Edit backend/Corrin.Tests/ShiftBreakTests.cs
+- Outcome: approved
+
+## Entry 108 - 2026-10-27 15:01 (edit)
+- Prompt: do the cleanup then start phase 4
+- Change: Edit backend/Corrin.Tests/WorkOrderServiceTests.cs
+- Outcome: approved
+
+## Entry 109 - 2026-10-27 15:01 (edit)
+- Prompt: do the cleanup then start phase 4
+- Change: Edit backend/Corrin.Tests/WorkOrderServiceTests.cs
+- Outcome: approved
+
+## Entry 110 - 2026-10-27 15:01 (edit)
+- Prompt: do the cleanup then start phase 4
+- Change: Edit backend/Corrin.Tests/ShiftBreakTests.cs
+- Outcome: approved
+
+## Entry 111 - 2026-10-27 15:02 (edit)
+- Prompt: do the cleanup then start phase 4
+- Change: Edit backend/Corrin.Tests/WorkOrderServiceTests.cs
+- Outcome: approved
+
+## Entry 112 - 2026-10-27 15:02 (edit)
+- Prompt: do the cleanup then start phase 4
+- Change: Edit backend/Corrin.Tests/WorkOrderServiceTests.cs
+- Outcome: approved
+
+## Entry 113 - 2026-10-27 15:06 (edit)
+- Prompt: do the cleanup then start phase 4
+- Change: Write backend/Corrin.Api/Domain/WorkOrderStatus.cs
+- Outcome: approved
+
+## Entry 114 - 2026-10-27 15:06 (edit)
+- Prompt: do the cleanup then start phase 4
+- Change: Write backend/Corrin.Api/Services/SlaState.cs
+- Outcome: approved
+
+## Entry 115 - 2026-10-27 15:06 (edit)
+- Prompt: do the cleanup then start phase 4
+- Change: Write backend/Corrin.Api/Repositories/WorkOrderReadRepository.cs
+- Outcome: approved
+
+## Entry 116 - 2026-10-27 15:06 (edit)
+- Prompt: do the cleanup then start phase 4
+- Change: Write backend/Corrin.Api/Services/WorkOrderService.cs
+- Outcome: approved
+
+## Entry 117 - 2026-10-27 15:06 (edit)
+- Prompt: do the cleanup then start phase 4
+- Change: Write backend/Corrin.Api/Services/DispatchBoardService.cs
+- Outcome: approved
+
+## Entry 118 - 2026-10-27 15:06 (edit)
+- Prompt: do the cleanup then start phase 4
+- Change: Edit backend/Corrin.Api/Dtos/Dtos.cs
+- Outcome: approved
+
+## Entry 119 - 2026-10-27 15:06 (edit)
+- Prompt: do the cleanup then start phase 4
+- Change: Edit backend/Corrin.Api/Mappers/Mappers.cs
+- Outcome: approved
+
+## Entry 120 - 2026-10-27 15:06 (edit)
+- Prompt: do the cleanup then start phase 4
+- Change: Edit backend/Corrin.Api/Validators/Validators.cs
+- Outcome: approved
+
+## Entry 121 - 2026-10-27 15:06 (edit)
+- Prompt: do the cleanup then start phase 4
+- Change: Edit backend/Corrin.Api/Controllers/WorkOrdersController.cs
+- Outcome: approved
+
+## Entry 122 - 2026-10-27 15:06 (edit)
+- Prompt: do the cleanup then start phase 4
+- Change: Edit backend/Corrin.Api/Program.cs
+- Outcome: approved
+
+## Entry 123 - 2026-10-27 15:06 (edit)
+- Prompt: do the cleanup then start phase 4
+- Change: Write backend/Corrin.Api/Controllers/DispatchController.cs
+- Outcome: approved
+
+## Entry 124 - 2026-10-27 15:06 (edit)
+- Prompt: do the cleanup then start phase 4
+- Change: Edit backend/Corrin.Api/Mappers/Mappers.cs
+- Outcome: approved
+
+## Entry 125 - 2026-10-27 15:06 (edit)
+- Prompt: do the cleanup then start phase 4
+- Change: Edit backend/Corrin.Api/Mappers/Mappers.cs
+- Outcome: approved
+
+## Entry 126 - 2026-10-27 15:07 (edit)
+- Prompt: do the cleanup then start phase 4
+- Change: Write backend/Corrin.Api/Domain/WorkOrderNotes.cs
+- Outcome: approved
+
+## Entry 127 - 2026-10-27 15:07 (edit)
+- Prompt: do the cleanup then start phase 4
+- Change: Edit backend/Corrin.Api/Services/WorkOrderSchedulingService.cs
+- Outcome: approved
+
+## Entry 128 - 2026-10-27 15:07 (edit)
+- Prompt: do the cleanup then start phase 4
+- Change: Edit backend/Corrin.Api/Repositories/WorkOrderReadRepository.cs
+- Outcome: approved
+
+## Entry 129 - 2026-10-27 15:08 (edit)
+- Prompt: do the cleanup then start phase 4
+- Change: Edit backend/Corrin.Api/Repositories/WorkOrderReadRepository.cs
+- Outcome: approved
+
+## Entry 130 - 2026-10-27 15:08 (edit)
+- Prompt: do the cleanup then start phase 4
+- Change: Edit frontend/src/App.tsx
+- Outcome: approved
+
+## Entry 131 - 2026-10-27 15:08 (edit)
+- Prompt: do the cleanup then start phase 4
+- Change: Edit frontend/src/App.tsx
+- Outcome: approved
+
+## Entry 132 - 2026-10-27 15:08 (edit)
+- Prompt: do the cleanup then start phase 4
+- Change: Edit frontend/src/App.tsx
+- Outcome: approved
+
+## Entry 133 - 2026-10-27 15:11 (edit)
+- Prompt: do the cleanup then start phase 4
+- Change: Edit frontend/src/components/firsttimefix/ftfUtils.ts
+- Outcome: approved
+
+## Entry 134 - 2026-10-27 15:11 (edit)
+- Prompt: do the cleanup then start phase 4
+- Change: Write frontend/src/components/dispatch/dispatchUtils.ts
+- Outcome: approved
+
+## Entry 135 - 2026-10-27 15:11 (edit)
+- Prompt: do the cleanup then start phase 4
+- Change: Write frontend/src/components/dispatch/JobChip.tsx
+- Outcome: approved
+
+## Entry 136 - 2026-10-27 15:11 (edit)
+- Prompt: do the cleanup then start phase 4
+- Change: Write frontend/src/components/dispatch/UnscheduledList.tsx
+- Outcome: approved
+
+## Entry 137 - 2026-10-27 15:11 (edit)
+- Prompt: do the cleanup then start phase 4
+- Change: Write frontend/src/components/dispatch/DispatchGrid.tsx
+- Outcome: approved
+
+## Entry 138 - 2026-10-27 15:11 (edit)
+- Prompt: do the cleanup then start phase 4
+- Change: Write frontend/src/components/dispatch/dispatch.css
+- Outcome: approved
+
+## Entry 139 - 2026-10-27 15:11 (edit)
+- Prompt: do the cleanup then start phase 4
+- Change: Write frontend/src/pages/DispatchBoardPage.tsx
+- Outcome: approved
+
+## Entry 140 - 2026-10-27 15:12 (edit)
+- Prompt: <task-notification>
+- Change: Write frontend/src/api/reference.ts
+- Outcome: approved
+
+## Entry 141 - 2026-10-27 15:12 (edit)
+- Prompt: <task-notification>
+- Change: Write frontend/src/components/workorders/StatusActions.tsx
+- Outcome: approved
+
+## Entry 142 - 2026-10-27 15:12 (edit)
+- Prompt: <task-notification>
+- Change: Write frontend/src/components/workorders/AllocatePanel.tsx
+- Outcome: approved
+
+## Entry 143 - 2026-10-27 15:12 (edit)
+- Prompt: <task-notification>
+- Change: Write frontend/src/components/workorders/SchedulePanel.tsx
+- Outcome: approved
+
+## Entry 144 - 2026-10-27 15:12 (edit)
+- Prompt: <task-notification>
+- Change: Write frontend/src/components/workorders/VisitPanel.tsx
+- Outcome: approved
+
+## Entry 145 - 2026-10-27 15:12 (edit)
+- Prompt: <task-notification>
+- Change: Write frontend/src/components/workorders/workorders.css
+- Outcome: approved
+
+## Entry 146 - 2026-10-27 15:13 (edit)
+- Prompt: <task-notification>
+- Change: Write backend/Corrin.Tests/WorkOrderStatusTests.cs
+- Outcome: approved
+
+## Entry 147 - 2026-10-27 15:13 (edit)
+- Prompt: <task-notification>
+- Change: Write frontend/src/pages/WorkOrdersPage.tsx
+- Outcome: approved
+
+## Entry 148 - 2026-10-27 15:13 (edit)
+- Prompt: <task-notification>
+- Change: Write frontend/src/pages/WorkOrderDetailPage.tsx
+- Outcome: approved
+
+## Entry 149 - 2026-10-27 15:13 (edit)
+- Prompt: <task-notification>
+- Change: Edit backend/Corrin.Tests/WorkOrderStatusTests.cs
+- Outcome: approved
+
+## Entry 150 - 2026-10-27 15:13 (edit)
+- Prompt: <task-notification>
+- Change: Write backend/Corrin.Tests/WorkOrderReadServiceTests.cs
+- Outcome: approved
+
+## Entry 151 - 2026-10-27 15:14 (edit)
+- Prompt: <task-notification>
+- Change: Write backend/Corrin.Tests/DispatchBoardServiceTests.cs
+- Outcome: approved
+
+## Entry 152 - 2026-10-27 15:14 (edit)
+- Prompt: <task-notification>
+- Change: Edit backend/Corrin.Tests/DispatchBoardServiceTests.cs
+- Outcome: approved
+
+## Entry 153 - 2026-10-27 15:14 (edit)
+- Prompt: <task-notification>
+- Change: Write backend/Corrin.Tests/WorkOrderReadRepositoryTests.cs
+- Outcome: approved
+
+## Entry 154 - 2026-10-27 15:15 (edit)
+- Prompt: <task-notification>
+- Change: Write backend/Corrin.Tests/WorkOrderReadApiTests.cs
+- Outcome: approved
+
+## Entry 155 - 2026-10-27 15:15 (edit)
+- Prompt: <task-notification>
+- Change: Edit backend/Corrin.Tests/WorkOrderReadApiTests.cs
+- Outcome: approved
+
+## Entry 156 - 2026-10-27 15:15 (edit)
+- Prompt: <task-notification>
+- Change: Edit backend/Corrin.Tests/WorkOrderReadApiTests.cs
+- Outcome: approved
+
+## Entry 157 - 2026-10-27 15:26 (edit)
+- Prompt: <task-notification>
+- Change: Write backend/db/migrations/007_backfill_visits.sql
+- Outcome: approved
+
+## Entry 158 - 2026-10-27 15:27 (edit)
+- Prompt: <task-notification>
+- Change: Edit frontend/src/pages/WorkOrdersPage.tsx
+- Outcome: approved
+
+## Entry 159 - 2026-10-27 15:27 (edit)
+- Prompt: <task-notification>
+- Change: Edit frontend/src/pages/WorkOrdersPage.tsx
+- Outcome: approved
+
+## Entry 160 - 2026-10-27 15:27 (edit)
+- Prompt: <task-notification>
+- Change: Edit frontend/src/pages/WorkOrdersPage.tsx
+- Outcome: approved
+
+## Entry 161 - 2026-10-27 15:27 (edit)
+- Prompt: <task-notification>
+- Change: Edit frontend/src/pages/WorkOrdersPage.tsx
+- Outcome: approved
+
+## Entry 162 - 2026-10-27 15:27 (edit)
+- Prompt: <task-notification>
+- Change: Edit frontend/src/components/workorders/refData.ts
+- Outcome: approved
+
+## Entry 163 - 2026-10-27 15:27 (edit)
+- Prompt: <task-notification>
+- Change: Edit frontend/src/components/workorders/refData.ts
+- Outcome: approved
+
+## Entry 164 - 2026-10-27 15:27 (edit)
+- Prompt: <task-notification>
+- Change: Edit frontend/src/components/firsttimefix/ftfUtils.ts
+- Outcome: approved
+
+## Entry 165 - 2026-10-27 15:28 (edit)
+- Prompt: <task-notification>
+- Change: Edit frontend/src/components/firsttimefix/ftfUtils.ts
+- Outcome: approved
+
+## Entry 166 - 2026-10-27 15:29 (edit)
+- Prompt: <task-notification>
+- Change: Edit backend/Corrin.Tests/FirstTimeFixRepositoryTests.cs
+- Outcome: approved
+
+## Entry 167 - 2026-10-27 15:29 (edit)
+- Prompt: <task-notification>
+- Change: Edit backend/Corrin.Tests/FirstTimeFixRepositoryTests.cs
+- Outcome: approved
+
+## Entry 168 - 2026-10-27 15:29 (edit)
+- Prompt: <task-notification>
+- Change: Edit backend/Corrin.Tests/FirstTimeFixRepositoryTests.cs
+- Outcome: approved
+
+## Entry 169 - 2026-10-27 15:29 (edit)
+- Prompt: <task-notification>
+- Change: Edit backend/Corrin.Tests/FirstTimeFixRepositoryTests.cs
+- Outcome: approved
+
+## Entry 170 - 2026-10-27 15:29 (edit)
+- Prompt: <task-notification>
+- Change: Edit backend/Corrin.Tests/FirstTimeFixRepositoryTests.cs
+- Outcome: approved
+
+## Entry 171 - 2026-10-27 15:29 (edit)
+- Prompt: <task-notification>
+- Change: Edit backend/Corrin.Tests/FirstTimeFixApiTests.cs
+- Outcome: approved
+
+## Entry 172 - 2026-10-27 15:30 (edit)
+- Prompt: <task-notification>
+- Change: Edit backend/Corrin.Tests/FirstTimeFixApiTests.cs
+- Outcome: approved
+
+## Entry 173 - 2026-10-27 15:30 (edit)
+- Prompt: <task-notification>
+- Change: Edit backend/Corrin.Tests/WorkOrderApiTests.cs
+- Outcome: approved
+
+## Entry 174 - 2026-10-27 15:38 (edit)
+- Prompt: <task-notification>
+- Change: Edit backend/Corrin.Api/Repositories/PartRepository.cs
+- Outcome: approved
+
+## Entry 175 - 2026-10-27 15:38 (edit)
+- Prompt: <task-notification>
+- Change: Edit backend/Corrin.Api/Repositories/PartRepository.cs
+- Outcome: approved
+
+## Entry 176 - 2026-10-27 15:39 (edit)
+- Prompt: <task-notification>
+- Change: Edit backend/Corrin.Api/Services/JobService.cs
+- Outcome: approved
+
+## Entry 177 - 2026-10-27 15:39 (edit)
+- Prompt: <task-notification>
+- Change: Edit backend/Corrin.Api/Services/JobService.cs
+- Outcome: approved
+
+## Entry 178 - 2026-10-27 15:39 (edit)
+- Prompt: <task-notification>
+- Change: Edit backend/Corrin.Api/Program.cs
+- Outcome: approved
+
+## Entry 179 - 2026-10-27 15:39 (edit)
+- Prompt: <task-notification>
+- Change: Edit backend/Corrin.Api/Program.cs
+- Outcome: approved
+
+## Entry 180 - 2026-10-27 15:40 (edit)
+- Prompt: <task-notification>
+- Change: Write backend/db/migrations/008_reorder_audit_and_backfill.sql
+- Outcome: approved
+
+## Entry 181 - 2026-10-27 15:43 (edit)
+- Prompt: <task-notification>
+- Change: Edit backend/Corrin.Tests/ServiceTests.cs
+- Outcome: approved
+
+## Entry 182 - 2026-10-27 15:43 (edit)
+- Prompt: <task-notification>
+- Change: Edit backend/Corrin.Tests/WorkOrderVisitServiceTests.cs
+- Outcome: approved
+
+## Entry 183 - 2026-10-27 15:43 (edit)
+- Prompt: <task-notification>
+- Change: Edit backend/Corrin.Tests/WorkOrderVisitServiceTests.cs
+- Outcome: approved
+
+## Entry 184 - 2026-10-27 15:43 (edit)
+- Prompt: <task-notification>
+- Change: Edit backend/Corrin.Tests/ServiceTests.cs
+- Outcome: approved
+
+## Entry 185 - 2026-10-27 15:44 (edit)
+- Prompt: <task-notification>
+- Change: Write backend/Corrin.Tests/ReorderServiceTests.cs
+- Outcome: approved
+
+## Entry 186 - 2026-10-27 15:44 (edit)
+- Prompt: <task-notification>
+- Change: Edit backend/Corrin.Tests/ReorderServiceTests.cs
+- Outcome: approved
+
+## Entry 187 - 2026-10-27 15:44 (edit)
+- Prompt: <task-notification>
+- Change: Write backend/Corrin.Tests/ReorderValidatorTests.cs
+- Outcome: approved
+
+## Entry 188 - 2026-10-27 15:45 (edit)
+- Prompt: <task-notification>
+- Change: Write backend/Corrin.Tests/ReorderRepositoryTests.cs
+- Outcome: approved
+
+## Entry 189 - 2026-10-27 15:45 (edit)
+- Prompt: <task-notification>
+- Change: Write backend/Corrin.Tests/ReorderApiTests.cs
+- Outcome: approved
+
+## Entry 190 - 2026-10-27 15:48 (edit)
+- Prompt: <task-notification>
+- Change: Edit backend/Corrin.Api/Repositories/ReorderRequestRepository.cs
+- Outcome: approved
+
+## Entry 191 - 2026-10-27 15:48 (edit)
+- Prompt: <task-notification>
+- Change: Edit backend/Corrin.Api/Services/ReorderService.cs
+- Outcome: approved
+
+## Entry 192 - 2026-10-27 15:51 (edit)
+- Prompt: <task-notification>
+- Change: Edit backend/Corrin.Tests/ReorderServiceTests.cs
+- Outcome: approved
+
+## Entry 193 - 2026-10-27 15:51 (edit)
+- Prompt: <task-notification>
+- Change: Edit backend/Corrin.Tests/ReorderRepositoryTests.cs
+- Outcome: approved
+
+## Entry 194 - 2026-10-27 15:51 (edit)
+- Prompt: <task-notification>
+- Change: Edit backend/Corrin.Tests/ReorderRepositoryTests.cs
+- Outcome: approved
+
+## Entry 195 - 2026-10-27 15:52 (edit)
+- Prompt: <task-notification>
+- Change: Edit backend/Corrin.Api/Services/ReorderService.cs
+- Outcome: approved
+
+## Entry 196 - 2026-10-27 15:53 (edit)
+- Prompt: <task-notification>
+- Change: Write frontend/src/api/reorderRequests.ts
+- Outcome: approved
+
+## Entry 197 - 2026-10-27 15:53 (edit)
+- Prompt: <task-notification>
+- Change: Write frontend/src/components/reorder/reorder.css
+- Outcome: approved
+
+## Entry 198 - 2026-10-27 15:53 (edit)
+- Prompt: <task-notification>
+- Change: Write frontend/src/components/reorder/ReorderActions.tsx
+- Outcome: approved
+
+## Entry 199 - 2026-10-27 15:54 (edit)
+- Prompt: <task-notification>
+- Change: Write frontend/src/pages/ReorderRequestsPage.tsx
+- Outcome: approved
+
+## Entry 200 - 2026-10-27 15:54 (edit)
+- Prompt: <task-notification>
+- Change: Edit frontend/src/App.tsx
+- Outcome: approved
+
+## Entry 201 - 2026-10-27 15:54 (edit)
+- Prompt: <task-notification>
+- Change: Edit frontend/src/App.tsx
+- Outcome: approved
+
+## Entry 202 - 2026-10-27 15:54 (edit)
+- Prompt: <task-notification>
+- Change: Edit frontend/src/App.tsx
+- Outcome: approved
+
+## Entry 203 - 2026-10-27 15:57 (edit)
+- Prompt: <task-notification>
+- Change: Edit docs/specs/work-orders.md
+- Outcome: approved
+
+## Entry 204 - 2026-10-27 15:57 (edit)
+- Prompt: <task-notification>
+- Change: Edit docs/specs/work-orders.md
+- Outcome: approved
+
+## Entry 205 - 2026-10-27 15:57 (edit)
+- Prompt: <task-notification>
+- Change: Edit docs/specs/work-orders.md
+- Outcome: approved
+
+## Entry 206 - 2026-10-27 15:57 (edit)
+- Prompt: <task-notification>
+- Change: Edit docs/specs/work-orders.md
+- Outcome: approved
+
+## Entry 207 - 2026-10-27 15:57 (edit)
+- Prompt: <task-notification>
+- Change: Edit docs/specs/work-orders.md
+- Outcome: approved
+
+## Entry 208 - 2026-10-27 15:57 (edit)
+- Prompt: <task-notification>
+- Change: Edit docs/specs/work-orders.md
+- Outcome: approved
+
+## Entry 209 - 2026-10-27 15:57 (edit)
+- Prompt: <task-notification>
+- Change: Edit docs/specs/work-orders.md
+- Outcome: approved
+
+## Entry 210 - 2026-10-27 15:57 (edit)
+- Prompt: <task-notification>
+- Change: Edit docs/specs/work-orders.md
+- Outcome: approved
+
+## Entry 211 - 2026-10-27 15:57 (edit)
+- Prompt: <task-notification>
+- Change: Edit docs/specs/work-orders.md
+- Outcome: approved
+
+## Entry 212 - 2026-10-27 15:57 (edit)
+- Prompt: <task-notification>
+- Change: Edit docs/specs/work-orders.md
+- Outcome: approved
+
+## Entry 213 - 2026-10-27 15:58 (edit)
+- Prompt: <task-notification>
+- Change: Edit docs/specs/work-orders.md
+- Outcome: approved
+
+## Entry 214 - 2026-10-27 15:58 (edit)
+- Prompt: <task-notification>
+- Change: Edit docs/specs/work-orders.md
+- Outcome: approved
+
+## Entry 215 - 2026-10-27 15:58 (edit)
+- Prompt: <task-notification>
+- Change: Edit docs/specs/work-orders.md
+- Outcome: approved
+
+## Entry 216 - 2026-10-27 15:58 (edit)
+- Prompt: <task-notification>
+- Change: Edit docs/specs/work-orders.md
+- Outcome: approved
+
+## Entry 217 - 2026-10-27 15:58 (edit)
+- Prompt: <task-notification>
+- Change: Edit docs/specs/work-orders.md
+- Outcome: approved
+
+## Entry 218 - 2026-10-27 15:58 (edit)
+- Prompt: <task-notification>
+- Change: Edit docs/specs/work-orders.md
+- Outcome: approved
+
+## Entry 219 - 2026-10-27 15:58 (edit)
+- Prompt: <task-notification>
+- Change: Edit docs/specs/work-orders.md
+- Outcome: approved
+
+## Entry 220 - 2026-10-27 15:58 (edit)
+- Prompt: <task-notification>
+- Change: Edit docs/specs/work-orders.md
+- Outcome: approved
+
+## Entry 221 - 2026-10-27 15:58 (edit)
+- Prompt: <task-notification>
+- Change: Edit docs/specs/work-orders.md
+- Outcome: approved
+
+## Entry 222 - 2026-10-27 15:59 (edit)
+- Prompt: <task-notification>
+- Change: Edit docs/specs/work-orders.md
+- Outcome: approved
+
+## Entry 223 - 2026-10-27 15:59 (edit)
+- Prompt: <task-notification>
+- Change: Edit docs/specs/work-orders.md
+- Outcome: approved
+
+## Entry 224 - 2026-10-27 15:59 (edit)
+- Prompt: <task-notification>
+- Change: Edit docs/specs/work-orders.md
+- Outcome: approved
+
+## Entry 225 - 2026-10-27 16:01 (edit)
+- Prompt: <task-notification>
+- Change: Edit frontend/src/components/workorders/VisitPanel.tsx
+- Outcome: approved
+
+## Entry 226 - 2026-10-27 16:01 (edit)
+- Prompt: <task-notification>
+- Change: Edit frontend/src/components/workorders/VisitPanel.tsx
+- Outcome: approved
+
+## Entry 227 - 2026-10-27 16:01 (edit)
+- Prompt: <task-notification>
+- Change: Edit frontend/src/components/workorders/VisitPanel.tsx
+- Outcome: approved
+
+## Entry 228 - 2026-10-27 16:01 (edit)
+- Prompt: <task-notification>
+- Change: Edit frontend/src/components/workorders/VisitPanel.tsx
+- Outcome: approved
+
+## Entry 229 - 2026-10-27 16:01 (edit)
+- Prompt: <task-notification>
+- Change: Edit frontend/src/components/workorders/VisitPanel.tsx
+- Outcome: approved
+
+## Entry 230 - 2026-10-27 16:01 (edit)
+- Prompt: <task-notification>
+- Change: Edit frontend/src/components/workorders/refData.ts
+- Outcome: approved
+
+## Entry 231 - 2026-10-27 16:01 (edit)
+- Prompt: <task-notification>
+- Change: Edit frontend/src/pages/JobsPage.tsx
+- Outcome: approved
+
+## Entry 232 - 2026-10-27 16:01 (edit)
+- Prompt: <task-notification>
+- Change: Edit frontend/src/pages/JobsPage.tsx
+- Outcome: approved
+
+## Entry 233 - 2026-10-27 16:02 (edit)
+- Prompt: <task-notification>
+- Change: Edit frontend/src/pages/JobsPage.tsx
+- Outcome: approved
+
+## Entry 234 - 2026-10-27 16:02 (edit)
+- Prompt: <task-notification>
+- Change: Edit frontend/src/pages/JobsPage.tsx
+- Outcome: approved
+
+## Entry 235 - 2026-10-27 16:02 (edit)
+- Prompt: <task-notification>
+- Change: Write backend/Corrin.Api/Services/EngineerBookingRules.cs
+- Outcome: approved
+
+## Entry 236 - 2026-10-27 16:02 (edit)
+- Prompt: <task-notification>
+- Change: Edit backend/Corrin.Api/Services/EngineerBookingRules.cs
+- Outcome: approved
+
+## Entry 237 - 2026-10-27 16:02 (edit)
+- Prompt: <task-notification>
+- Change: Edit backend/Corrin.Api/Services/WorkOrderAllocationService.cs
+- Outcome: approved
+
+## Entry 238 - 2026-10-27 16:02 (edit)
+- Prompt: <task-notification>
+- Change: Edit backend/Corrin.Api/Services/WorkOrderAllocationService.cs
+- Outcome: approved
+
+## Entry 239 - 2026-10-27 16:02 (edit)
+- Prompt: <task-notification>
+- Change: Edit backend/Corrin.Api/Services/WorkOrderSchedulingService.cs
+- Outcome: approved
+
+## Entry 240 - 2026-10-27 16:02 (edit)
+- Prompt: <task-notification>
+- Change: Edit backend/Corrin.Api/Services/WorkOrderSchedulingService.cs
+- Outcome: approved
+
+## Entry 241 - 2026-10-27 16:02 (edit)
+- Prompt: <task-notification>
+- Change: Edit backend/Corrin.Api/Services/WorkOrderSchedulingService.cs
+- Outcome: approved
+
+## Entry 242 - 2026-10-27 16:02 (edit)
+- Prompt: <task-notification>
+- Change: Edit backend/Corrin.Api/Services/WorkOrderSchedulingService.cs
+- Outcome: approved
+
+## Entry 243 - 2026-10-27 16:03 (edit)
+- Prompt: <task-notification>
+- Change: Edit backend/Corrin.Api/Services/JobService.cs
+- Outcome: approved
+
+## Entry 244 - 2026-10-27 16:03 (edit)
+- Prompt: <task-notification>
+- Change: Edit backend/Corrin.Api/Services/JobService.cs
+- Outcome: approved
+
+## Entry 245 - 2026-10-27 16:03 (edit)
+- Prompt: <task-notification>
+- Change: Edit backend/Corrin.Api/Validators/Validators.cs
+- Outcome: approved
+
+## Entry 246 - 2026-10-27 16:03 (edit)
+- Prompt: <task-notification>
+- Change: Edit backend/Corrin.Api/Validators/Validators.cs
+- Outcome: approved
+
+## Entry 247 - 2026-10-27 16:03 (edit)
+- Prompt: <task-notification>
+- Change: Edit backend/Corrin.Api/Program.cs
+- Outcome: approved
+
+## Entry 248 - 2026-10-27 16:05 (edit)
+- Prompt: <task-notification>
+- Change: Edit backend/Corrin.Api/Services/WorkOrderSchedulingService.cs
+- Outcome: approved
+
+## Entry 249 - 2026-10-27 16:05 (edit)
+- Prompt: <task-notification>
+- Change: Edit backend/Corrin.Api/Services/WorkOrderSchedulingService.cs
+- Outcome: approved
+
+## Entry 250 - 2026-10-27 16:06 (edit)
+- Prompt: <task-notification>
+- Change: Edit backend/Corrin.Api/Services/WorkOrderSchedulingService.cs
+- Outcome: approved
+
+## Entry 251 - 2026-10-27 16:06 (edit)
+- Prompt: <task-notification>
+- Change: Edit backend/Corrin.Api/Services/WorkOrderSchedulingService.cs
+- Outcome: approved
+
+## Entry 252 - 2026-10-27 16:06 (edit)
+- Prompt: <task-notification>
+- Change: Edit backend/Corrin.Api/Services/WorkOrderSchedulingService.cs
+- Outcome: approved
+
+## Entry 253 - 2026-10-27 16:06 (edit)
+- Prompt: <task-notification>
+- Change: Edit backend/Corrin.Api/Services/JobService.cs
+- Outcome: approved
+
+## Entry 254 - 2026-10-27 16:06 (edit)
+- Prompt: <task-notification>
+- Change: Edit backend/Corrin.Api/Services/JobService.cs
+- Outcome: approved
+
+## Entry 255 - 2026-10-27 16:06 (edit)
+- Prompt: <task-notification>
+- Change: Edit backend/Corrin.Api/Services/DispatchBoardService.cs
+- Outcome: approved
+
+## Entry 256 - 2026-10-27 16:06 (edit)
+- Prompt: <task-notification>
+- Change: Edit backend/Corrin.Api/Services/DispatchBoardService.cs
+- Outcome: approved
+
+## Entry 257 - 2026-10-27 16:06 (edit)
+- Prompt: <task-notification>
+- Change: Edit backend/Corrin.Api/Dtos/Dtos.cs
+- Outcome: approved
+
+## Entry 258 - 2026-10-27 16:06 (edit)
+- Prompt: <task-notification>
+- Change: Edit backend/Corrin.Api/Controllers/ReportsController.cs
+- Outcome: approved
+
+## Entry 259 - 2026-10-27 16:06 (edit)
+- Prompt: <task-notification>
+- Change: Edit backend/Corrin.Api/Controllers/ReportsController.cs
+- Outcome: approved
+
+## Entry 260 - 2026-10-27 16:06 (edit)
+- Prompt: <task-notification>
+- Change: Edit backend/Corrin.Api/Validators/Validators.cs
+- Outcome: approved

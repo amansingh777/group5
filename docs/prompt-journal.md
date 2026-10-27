@@ -144,3 +144,68 @@
 - Prompt: commit the changes
 - Change: Edit CLAUDE.md
 - Outcome: approved
+
+## Entry 30 - 2026-10-27 06:27 (commit)
+- Prompt: commit the changes
+- Change: commit 4daef30 Document MCP guard test command in CLAUDE.md; update prompt journal
+- Outcome: committed
+
+## Entry 31 - 2026-10-27 06:33 (edit)
+- Prompt: Sonnet you be the orchestrator read docs/bug-CUS-19.md create a plan to fix these bugs, divide it into phases and assign sub agents for each phase of the plan
+- Change: Write ../.claude/plans/sonnet-you-be-the-dynamic-perlis.md
+- Outcome: approved
+
+## Entry 32 - 2026-10-27 06:37 (edit)
+- Prompt: Sonnet you be the orchestrator read docs/bug-CUS-19.md create a plan to fix these bugs, divide it into phases and assign sub agents for each phase of the plan
+- Change: Edit ../.claude/plans/sonnet-you-be-the-dynamic-perlis.md
+- Outcome: approved
+
+## Entry 33 - 2026-10-27 06:40 (edit)
+- Prompt: Sonnet you be the orchestrator read docs/bug-CUS-19.md create a plan to fix these bugs, divide it into phases and assign sub agents for each phase of the plan
+- Change: Write docs/debug-report.md
+- Outcome: approved
+
+## Entry 34 - 2026-10-27 06:41 (edit)
+- Prompt: Sonnet you be the orchestrator read docs/bug-CUS-19.md create a plan to fix these bugs, divide it into phases and assign sub agents for each phase of the plan
+- Change: Edit backend/Corrin.Api/Services/ReportService.cs
+- Outcome: approved
+
+## Entry 35 - 2026-10-27 06:41 (edit)
+- Prompt: Sonnet you be the orchestrator read docs/bug-CUS-19.md create a plan to fix these bugs, divide it into phases and assign sub agents for each phase of the plan
+- Change: Edit backend/Corrin.Api/Services/ReportService.cs
+- Outcome: approved
+
+## Entry 36 - 2026-10-27 06:41 (edit)
+- Prompt: Sonnet you be the orchestrator read docs/bug-CUS-19.md create a plan to fix these bugs, divide it into phases and assign sub agents for each phase of the plan
+- Change: Edit backend/Corrin.Tests/ReportServiceTests.cs
+- Outcome: approved
+
+## Entry 37 - 2026-10-27 06:42 (edit)
+- Prompt: Sonnet you be the orchestrator read docs/bug-CUS-19.md create a plan to fix these bugs, divide it into phases and assign sub agents for each phase of the plan
+- Change: Edit backend/Corrin.Tests/ReportServiceTests.cs
+- Outcome: approved
+
+## Entry 38 - 2026-10-27 06:42 (edit)
+- Prompt: Sonnet you be the orchestrator read docs/bug-CUS-19.md create a plan to fix these bugs, divide it into phases and assign sub agents for each phase of the plan
+- Change: Edit backend/Corrin.Tests/ApiTests.cs
+- Outcome: approved
+
+## Entry 39 - 2026-10-27 06:44 (edit)
+- Prompt: Sonnet you be the orchestrator read docs/bug-CUS-19.md create a plan to fix these bugs, divide it into phases and assign sub agents for each phase of the plan
+- Change: Edit docs/debug-report.md
+- Outcome: approved
+
+## Entry 40 - 2026-10-27 06:44 (edit)
+- Prompt: Sonnet you be the orchestrator read docs/bug-CUS-19.md create a plan to fix these bugs, divide it into phases and assign sub agents for each phase of the plan
+- Change: Write docs/refactor-note.md
+- Outcome: approved
+
+## Entry 41 - 2026-10-27 06:48 (edit)
+- Prompt: create only e2e-browser-check and test-writer
+- Change: Write .claude/agents/e2e-browser-check.md
+- Outcome: approved
+
+## Entry 42 - 2026-10-27 06:48 (edit)
+- Prompt: create only e2e-browser-check and test-writer
+- Change: Write .claude/agents/test-writer.md
+- Outcome: approved

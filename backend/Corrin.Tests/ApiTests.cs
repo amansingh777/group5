@@ -83,6 +83,14 @@ public class ApiTests
     }
 
     [Fact]
+    public async Task Utilisation_PartTimersAndFullTimers_UseRosteredHours()
+    {
+        var rows = await _client.GetFromJsonAsync<List<UtilisationRowDto>>("/api/reports/engineer-utilisation?from=2026-09-01&to=2026-09-30", Json);
+        Assert.Equal(47.4, rows!.Single(r => r.EngineerName == "Owen Parry").UtilisationPct);
+        Assert.Equal(22.0, rows!.Single(r => r.EngineerName == "Zainab Iqbal").UtilisationPct);
+    }
+
+    [Fact]
     public async Task Users_ReturnsList()
     {
         var response = await _client.GetAsync("/api/users");

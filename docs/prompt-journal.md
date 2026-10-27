@@ -109,3 +109,13 @@
 - Prompt: create a mcp server for mysql and expose tools in it for running query. only read access should be there.
 - Change: Write tools/mysql-mcp/README.md
 - Outcome: approved
+
+## Entry 23 - 2026-10-26 16:30 (commit)
+- Prompt: commit all the untracked and modified changes
+- Change: commit 1a74ed6 Add MySQL MCP tool, VS Code settings, and /reflect docs
+- Outcome: committed
+
+## Entry 24 - 2026-10-27 05:51 (edit)
+- Prompt: i created mcp server but /mcp is not showing any servers also there is no mcp.json created
+- Change: Write .mcp.json
+- Outcome: approved

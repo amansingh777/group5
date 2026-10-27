@@ -119,3 +119,28 @@
 - Prompt: i created mcp server but /mcp is not showing any servers also there is no mcp.json created
 - Change: Write .mcp.json
 - Outcome: approved
+
+## Entry 25 - 2026-10-27 05:51 (commit)
+- Prompt: commit the changes
+- Change: commit 04a5e47 Register MySQL MCP server via project .mcp.json
+- Outcome: committed
+
+## Entry 26 - 2026-10-27 06:03 (edit)
+- Prompt: The current CLAUDE.md is wrong for this repo. Rewrite it from what the code actually does
+- Change: Write ../.claude/plans/the-current-claude-md-is-eager-kazoo.md
+- Outcome: approved
+
+## Entry 27 - 2026-10-27 06:05 (edit)
+- Prompt: The current CLAUDE.md is wrong for this repo. Rewrite it from what the code actually does
+- Change: Write CLAUDE.md
+- Outcome: approved
+
+## Entry 28 - 2026-10-27 06:26 (commit)
+- Prompt: commit the changes
+- Change: commit 32788e3 Add negative tests for MySQL MCP SQL guard and document MCP security
+- Outcome: committed
+
+## Entry 29 - 2026-10-27 06:26 (edit)
+- Prompt: commit the changes
+- Change: Edit CLAUDE.md
+- Outcome: approved

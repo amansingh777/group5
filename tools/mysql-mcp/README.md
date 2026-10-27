@@ -57,3 +57,7 @@ Or add to `.mcp.json`:
 ```bash
 npx @modelcontextprotocol/inspector node tools/mysql-mcp/index.js
 ```
+
+## Tests and security
+
+`npm test` runs the negative SQL-guard tests (no database needed). See [docs/mcp-security.md](../../docs/mcp-security.md) for the threat model and known gaps (notably: no PII column protection).

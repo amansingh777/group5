@@ -7,6 +7,7 @@ import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import mysql from "mysql2/promise";
 import { z } from "zod";
+import { assertReadOnly } from "./sql-guard.js";
 
 const here = dirname(fileURLToPath(import.meta.url));
 const repoRoot = resolve(here, "..", "..");
@@ -73,33 +74,6 @@ const pool = mysql.createPool({
   multipleStatements: false,
   dateStrings: true,
 });
-
-// Statements that may start a read-only query.
-const ALLOWED_START = /^(SELECT|SHOW|DESCRIBE|DESC|EXPLAIN|WITH)\b/i;
-
-// Any of these anywhere in the (comment- and string-stripped) SQL is rejected.
-const FORBIDDEN = /\b(INSERT|UPDATE|DELETE|REPLACE|DROP|ALTER|CREATE|TRUNCATE|RENAME|GRANT|REVOKE|CALL|LOAD|DO|HANDLER|SET|LOCK|UNLOCK|INTO|PREPARE|EXECUTE|DEALLOCATE|FLUSH|KILL|RESET|SHUTDOWN|INSTALL|UNINSTALL|ANALYZE|OPTIMIZE|REPAIR)\b|\bFOR\s+UPDATE\b|\bFOR\s+SHARE\b|\bLOCK\s+IN\s+SHARE\s+MODE\b/i;
-
-// Removes comments and quoted literals so keywords inside them don't trigger or hide anything.
-function stripCommentsAndStrings(sql) {
-  return sql
-    .replace(/\/\*[\s\S]*?\*\//g, " ")
-    .replace(/--[^\n]*/g, " ")
-    .replace(/#[^\n]*/g, " ")
-    .replace(/'(?:[^'\\]|\\.|'')*'/g, "''")
-    .replace(/"(?:[^"\\]|\\.|"")*"/g, '""')
-    .replace(/`[^`]*`/g, "``");
-}
-
-function assertReadOnly(sql) {
-  const stripped = stripCommentsAndStrings(sql).trim().replace(/;+\s*$/, "");
-  if (stripped.includes(";")) throw new Error("Multiple statements are not allowed.");
-  if (!ALLOWED_START.test(stripped)) {
-    throw new Error("Only SELECT, SHOW, DESCRIBE, EXPLAIN and WITH queries are allowed.");
-  }
-  const bad = stripped.match(FORBIDDEN);
-  if (bad) throw new Error(`Statement contains a disallowed keyword: ${bad[0].toUpperCase()}`);
-}
 
 // Runs inside a READ ONLY transaction, so MySQL itself refuses writes even if the checks above miss one.
 async function runReadOnly(sql, params = []) {

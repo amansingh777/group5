@@ -1,0 +1,41 @@
+.wo-filters { display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; margin-top: 1rem; }
+.wo-filters label, .wo-acting label { display: inline-flex; gap: 0.4rem; align-items: center; }
+
+.wo-acting { display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap; margin-top: 1rem; }
+.wo-acting input { padding: 0.3rem 0.5rem; }
+
+.badge { display: inline-block; padding: 0.1rem 0.5rem; border-radius: 999px; font-size: 0.85rem; border: 1px solid #94a3b8; background: #f1f5f9; color: #1e293b; white-space: nowrap; }
+.badge.sla-ok { background: #e6f4ea; border-color: #2f7d4a; color: #1d5c34; }
+.badge.sla-amber { background: #fff4d6; border-color: #b7791f; color: #7a4e0b; }
+.badge.sla-breached { background: #fde8e8; border-color: #b42318; color: #8a1c12; font-weight: 600; }
+.badge.sla-none { background: #fff; color: #4a5568; }
+
+.wo-header { display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap; }
+.wo-header h1 { margin: 0; }
+.wo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1rem; margin-top: 1rem; align-items: start; }
+
+.wo-panel { background: #fff; border: 1px solid #e2e8f0; border-radius: 6px; padding: 1rem; }
+.wo-panel h2 { margin-top: 0; font-size: 1.1rem; }
+.wo-panel dl { display: grid; grid-template-columns: max-content 1fr; gap: 0.35rem 1rem; margin: 0; }
+.wo-panel dt { color: #4a5568; }
+.wo-panel dd { margin: 0; }
+.wo-panel ul { padding-left: 1.25rem; }
+.wo-panel table { margin-top: 0.5rem; }
+.wo-skeleton { min-height: 6rem; background: #edf2f7; border: none; }
+
+.wo-form { display: grid; gap: 0.6rem; margin-top: 0.5rem; }
+.wo-form label { display: grid; gap: 0.2rem; }
+.wo-row { display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap; margin-top: 0.5rem; }
+.wo-parts { border: 1px solid #e2e8f0; border-radius: 6px; padding: 0.5rem 0.75rem; }
+
+.wo-alert { border-radius: 6px; padding: 0.75rem 1rem; margin-top: 0.75rem; border: 1px solid; }
+.wo-alert p { margin: 0.25rem 0 0; }
+.wo-alert.error { background: #fde8e8; border-color: #b42318; color: #7a1a12; }
+.wo-alert.warning { background: #fff8e6; border-color: #b7791f; color: #5c3d0b; }
+.wo-alert.success { background: #e6f4ea; border-color: #2f7d4a; color: #1d5c34; }
+
+.wo-hint, .wo-muted { color: #4a5568; font-size: 0.9rem; }
+.wo-candidates { list-style: none; padding: 0; margin: 0.5rem 0; }
+.wo-candidates li { padding: 0.4rem 0; border-bottom: 1px solid #e2e8f0; }
+.wo-candidates ul { margin: 0.25rem 0 0 1.5rem; color: #7a4e0b; font-size: 0.9rem; }
+.wo-warnings { color: #7a4e0b; }

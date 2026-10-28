@@ -185,3 +185,29 @@ public class JobRequest
     public string? RejectionReason { get; set; }
     public int? JobId { get; set; }
 }
+
+public class Visit
+{
+    public int Id { get; set; }
+    public int JobId { get; set; }
+    public int? EngineerId { get; set; }
+    public int VisitNo { get; set; }
+    public DateTime? ScheduledStart { get; set; }
+    public DateTime? ScheduledEnd { get; set; }
+    public DateTime? ActualStart { get; set; }
+    public DateTime? ActualEnd { get; set; }
+    public string? Outcome { get; set; }
+    public DateTime CreatedAt { get; set; }
+}
+
+public class ReorderRequest
+{
+    public int Id { get; set; }
+    public int PartId { get; set; }
+    public string Status { get; set; } = "Open";
+    public DateOnly? ExpectedOn { get; set; }
+    public string? OrderedBy { get; set; }
+    public string? ReceivedBy { get; set; }
+    public DateTime CreatedAt { get; set; }
+    public DateTime UpdatedAt { get; set; }
+}

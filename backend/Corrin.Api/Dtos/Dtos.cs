@@ -52,3 +52,36 @@ public record ImportBatchDto(int Id, string FileName, DateTime ImportedAt, int T
 public record JobRequestDto(int Id, int BatchId, int RowNo, string? CustomerRef, string? SitePostcode, string? JobTypeCode, string? Priority,
     DateOnly? RequestedDate, string? Description, string Result, string? RejectionReason, int? JobId);
 public record ImportResultDto(int BatchId, int TotalRows, int CreatedRows, int RejectedRows, IReadOnlyList<string> Messages);
+
+public record WorkOrderCandidateDto(int Rank, int EngineerId, string EngineerName, int RegionId, string RankReason, IReadOnlyList<string> Warnings);
+public record WorkOrderAllocateRequest(int EngineerId, string UserName, DateOnly? Date);
+public record WorkOrderAllocationDto(int JobId, string Status, int EngineerId, IReadOnlyList<string> Warnings);
+public record WorkOrderScheduleRequest(int? EngineerId, DateTime Start, string UserName);
+public record DisplacedJobDto(int JobId, string JobRef, string Status, int? EngineerId);
+public record WorkOrderScheduleDto(int JobId, string Status, int EngineerId, DateTime Start, DateTime End, IReadOnlyList<DisplacedJobDto> Displaced);
+public record NextSlotDto(int EngineerId, string EngineerName, DateTime Start, DateTime End);
+public record VisitDto(int Id, int JobId, int? EngineerId, int VisitNo, DateTime? ScheduledStart, DateTime? ScheduledEnd, DateTime? ActualStart, DateTime? ActualEnd, string? Outcome, DateTime CreatedAt);
+public record VisitCompleteRequest(string Outcome, string UserName, string? Notes, IReadOnlyList<JobPartRequest>? Parts);
+
+public record FirstTimeFixQuery(string From, string To);
+public record FirstTimeFixRowDto(string Name, int JobsAttended, int FixedFirstTime, double RatePercent);
+public record FirstTimeFixReportDto(string From, string To, FirstTimeFixRowDto Overall, IReadOnlyList<FirstTimeFixRowDto> ByRegion, IReadOnlyList<FirstTimeFixRowDto> ByJobType);
+
+public record WorkOrderListQuery(int Page = 1, int PageSize = 25, string? Status = null, int? RegionId = null, int? EngineerId = null, string? Priority = null);
+public record WorkOrderStatusRequest(string Status, string UserName);
+public record WorkOrderDto(int Id, string JobRef, int RegionId, string CustomerName, string SiteName, string SitePostcode, string? AssetSummary,
+    string JobType, string RequiredSkill, string Priority, string Status, int? EngineerId, string? EngineerName,
+    DateTime? ScheduledStart, DateTime? ScheduledEnd, DateTime? SlaDueAt, string SlaState, string? Description, string? Outcome,
+    DateTime CreatedAt, IReadOnlyList<JobNoteDto> Notes, IReadOnlyList<JobPartDto> Parts);
+
+// Unscheduled is capped at 200 rows; UnscheduledTotal is the uncapped count.
+public record DispatchBoardDto(DateOnly From, int Days, IReadOnlyList<DispatchEngineerRowDto> Engineers, IReadOnlyList<DispatchBoardJobDto> Unscheduled, int UnscheduledTotal);
+public record DispatchEngineerRowDto(int EngineerId, string FullName, int RegionId, IReadOnlyList<int> SkillIds, IReadOnlyList<DispatchCellDto> Cells);
+public record DispatchCellDto(DateOnly Date, TimeOnly? ShiftStart, TimeOnly? ShiftEnd, int BreakMinutes, IReadOnlyList<DispatchBoardJobDto> Jobs);
+public record DispatchBoardJobDto(int Id, string JobRef, string Priority, string Status, DateTime? Start, DateTime? End, string SlaState, bool NeedsRebook);
+
+public record ReorderRequestListQuery(int Page = 1, int PageSize = 25, string? Status = null, int? PartId = null);
+public record ReorderRequestDto(int Id, int PartId, string PartSku, string PartName, int StockQty, int ReorderLevel, bool BelowReorderLevel,
+    string Status, DateOnly? ExpectedOn, string? OrderedBy, string? ReceivedBy, DateTime CreatedAt, DateTime UpdatedAt);
+public record ReorderOrderedRequest(DateOnly ExpectedOn, string UserName);
+public record ReorderReceivedRequest(int Quantity, string UserName);

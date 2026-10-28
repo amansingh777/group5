@@ -11,6 +11,11 @@ public interface IPartRepository
     Task<Part?> GetAsync(int id);
     Task<Part> AddAsync(Part part);
     Task UpdateAsync(Part part);
+    Task<int> TryDecrementStockAsync(int partId, int quantity);
+    // Fresh (untracked) read of stock and reorder level, so it sees changes made by ExecuteUpdate in the same transaction.
+    Task<(int StockQty, int ReorderLevel)?> GetStockLevelAsync(int partId);
+    // Atomic increment (used when a reorder is received): returns rows affected.
+    Task<int> IncrementStockAsync(int partId, int quantity);
 }
 
 public class PartRepository : IPartRepository
@@ -38,4 +43,20 @@ public class PartRepository : IPartRepository
     }
 
     public Task UpdateAsync(Part part) => _db.SaveChangesAsync();
+
+    // Conditional, atomic decrement: returns rows affected (0 when stock is insufficient or the part is missing).
+    public Task<int> TryDecrementStockAsync(int partId, int quantity) =>
+        _db.Parts.Where(p => p.Id == partId && p.StockQty >= quantity)
+            .ExecuteUpdateAsync(s => s.SetProperty(p => p.StockQty, p => p.StockQty - quantity));
+
+    public async Task<(int StockQty, int ReorderLevel)?> GetStockLevelAsync(int partId)
+    {
+        var row = await _db.Parts.AsNoTracking().Where(p => p.Id == partId)
+            .Select(p => new { p.StockQty, p.ReorderLevel }).FirstOrDefaultAsync();
+        return row is null ? null : (row.StockQty, row.ReorderLevel);
+    }
+
+    public Task<int> IncrementStockAsync(int partId, int quantity) =>
+        _db.Parts.Where(p => p.Id == partId)
+            .ExecuteUpdateAsync(s => s.SetProperty(p => p.StockQty, p => p.StockQty + quantity));
 }

@@ -1299,3 +1299,248 @@
 - Prompt: <task-notification>
 - Change: Edit backend/Corrin.Api/Validators/Validators.cs
 - Outcome: approved
+
+## Entry 261 - 2026-10-27 16:09 (edit)
+- Prompt: <task-notification>
+- Change: Edit backend/Corrin.Tests/ServiceTests.cs
+- Outcome: approved
+
+## Entry 262 - 2026-10-27 16:09 (edit)
+- Prompt: <task-notification>
+- Change: Edit backend/Corrin.Tests/WorkOrderServiceTests.cs
+- Outcome: approved
+
+## Entry 263 - 2026-10-27 16:09 (edit)
+- Prompt: <task-notification>
+- Change: Edit backend/Corrin.Tests/WorkOrderServiceTests.cs
+- Outcome: approved
+
+## Entry 264 - 2026-10-27 16:09 (edit)
+- Prompt: <task-notification>
+- Change: Edit backend/Corrin.Tests/ReorderRepositoryTests.cs
+- Outcome: approved
+
+## Entry 265 - 2026-10-27 16:09 (edit)
+- Prompt: <task-notification>
+- Change: Edit backend/Corrin.Tests/WorkOrderVisitServiceTests.cs
+- Outcome: approved
+
+## Entry 266 - 2026-10-27 16:09 (edit)
+- Prompt: <task-notification>
+- Change: Edit backend/Corrin.Tests/WorkOrderVisitServiceTests.cs
+- Outcome: approved
+
+## Entry 267 - 2026-10-27 16:11 (edit)
+- Prompt: <task-notification>
+- Change: Edit backend/Corrin.Tests/JobUpdateRequestValidatorTests.cs
+- Outcome: approved
+
+## Entry 268 - 2026-10-27 16:11 (edit)
+- Prompt: <task-notification>
+- Change: Edit backend/Corrin.Tests/JobUpdateRequestValidatorTests.cs
+- Outcome: approved
+
+## Entry 269 - 2026-10-27 16:11 (edit)
+- Prompt: <task-notification>
+- Change: Edit backend/Corrin.Tests/WorkOrderServiceTests.cs
+- Outcome: approved
+
+## Entry 270 - 2026-10-27 16:11 (edit)
+- Prompt: <task-notification>
+- Change: Edit backend/Corrin.Tests/ServiceTests.cs
+- Outcome: approved
+
+## Entry 271 - 2026-10-27 16:11 (edit)
+- Prompt: <task-notification>
+- Change: Edit backend/Corrin.Tests/ServiceTests.cs
+- Outcome: approved
+
+## Entry 272 - 2026-10-27 16:11 (edit)
+- Prompt: <task-notification>
+- Change: Edit backend/Corrin.Tests/ServiceTests.cs
+- Outcome: approved
+
+## Entry 273 - 2026-10-27 16:11 (edit)
+- Prompt: <task-notification>
+- Change: Edit backend/Corrin.Tests/WorkOrderVisitServiceTests.cs
+- Outcome: approved
+
+## Entry 274 - 2026-10-27 16:11 (edit)
+- Prompt: <task-notification>
+- Change: Edit backend/Corrin.Tests/WorkOrderVisitServiceTests.cs
+- Outcome: approved
+
+## Entry 275 - 2026-10-27 16:14 (edit)
+- Prompt: <task-notification>
+- Change: Write backend/Corrin.Tests/JobServiceBookingTests.cs
+- Outcome: approved
+
+## Entry 276 - 2026-10-27 16:14 (edit)
+- Prompt: <task-notification>
+- Change: Edit backend/Corrin.Tests/JobServiceBookingTests.cs
+- Outcome: approved
+
+## Entry 277 - 2026-10-27 16:14 (edit)
+- Prompt: <task-notification>
+- Change: Edit backend/Corrin.Tests/ServiceTests.cs
+- Outcome: approved
+
+## Entry 278 - 2026-10-27 16:14 (edit)
+- Prompt: <task-notification>
+- Change: Edit backend/Corrin.Tests/ServiceTests.cs
+- Outcome: approved
+
+## Entry 279 - 2026-10-27 16:15 (edit)
+- Prompt: <task-notification>
+- Change: Write backend/Corrin.Tests/EngineerAssignmentSafetyTests.cs
+- Outcome: approved
+
+## Entry 280 - 2026-10-27 16:15 (edit)
+- Prompt: <task-notification>
+- Change: Edit backend/Corrin.Tests/EngineerAssignmentSafetyTests.cs
+- Outcome: approved
+
+## Entry 281 - 2026-10-27 16:16 (edit)
+- Prompt: <task-notification>
+- Change: Write backend/Corrin.Tests/WorkOrderP1DisplacementTests.cs
+- Outcome: approved
+
+## Entry 282 - 2026-10-27 16:16 (edit)
+- Prompt: <task-notification>
+- Change: Edit backend/Corrin.Tests/WorkOrderP1DisplacementTests.cs
+- Outcome: approved
+
+## Entry 283 - 2026-10-27 16:16 (edit)
+- Prompt: <task-notification>
+- Change: Edit backend/Corrin.Tests/WorkOrderP1DisplacementTests.cs
+- Outcome: approved
+
+## Entry 284 - 2026-10-27 16:16 (edit)
+- Prompt: <task-notification>
+- Change: Edit backend/Corrin.Tests/WorkOrderP1DisplacementTests.cs
+- Outcome: approved
+
+## Entry 285 - 2026-10-27 16:17 (edit)
+- Prompt: <task-notification>
+- Change: Write backend/Corrin.Tests/UkClockTests.cs
+- Outcome: approved
+
+## Entry 286 - 2026-10-27 16:17 (edit)
+- Prompt: <task-notification>
+- Change: Edit backend/Corrin.Tests/DispatchBoardServiceTests.cs
+- Outcome: approved
+
+## Entry 287 - 2026-10-27 16:17 (edit)
+- Prompt: <task-notification>
+- Change: Edit backend/Corrin.Tests/ReorderValidatorTests.cs
+- Outcome: approved
+
+## Entry 288 - 2026-10-27 16:18 (edit)
+- Prompt: <task-notification>
+- Change: Write backend/Corrin.Tests/LegacyJobAssignmentApiTests.cs
+- Outcome: approved
+
+## Entry 289 - 2026-10-27 16:21 (edit)
+- Prompt: <task-notification>
+- Change: Edit docs/specs/work-orders.md
+- Outcome: approved
+
+## Entry 290 - 2026-10-27 16:22 (edit)
+- Prompt: <task-notification>
+- Change: Edit docs/specs/work-orders.md
+- Outcome: approved
+
+## Entry 291 - 2026-10-27 16:22 (edit)
+- Prompt: <task-notification>
+- Change: Edit docs/specs/work-orders.md
+- Outcome: approved
+
+## Entry 292 - 2026-10-27 16:22 (edit)
+- Prompt: <task-notification>
+- Change: Edit docs/specs/work-orders.md
+- Outcome: approved
+
+## Entry 293 - 2026-10-27 16:23 (edit)
+- Prompt: <task-notification>
+- Change: Edit backend/Corrin.Api/Services/JobService.cs
+- Outcome: approved
+
+## Entry 294 - 2026-10-27 16:24 (edit)
+- Prompt: <task-notification>
+- Change: Edit backend/Corrin.Api/Services/JobService.cs
+- Outcome: approved
+
+## Entry 295 - 2026-10-27 16:24 (edit)
+- Prompt: <task-notification>
+- Change: Edit backend/Corrin.Api/Services/JobService.cs
+- Outcome: approved
+
+## Entry 296 - 2026-10-27 16:24 (edit)
+- Prompt: <task-notification>
+- Change: Edit backend/Corrin.Api/Validators/Validators.cs
+- Outcome: approved
+
+## Entry 297 - 2026-10-27 16:24 (edit)
+- Prompt: <task-notification>
+- Change: Edit backend/Corrin.Api/Validators/Validators.cs
+- Outcome: approved
+
+## Entry 298 - 2026-10-27 16:26 (edit)
+- Prompt: <task-notification>
+- Change: Edit docs/specs/work-orders.md
+- Outcome: approved
+
+## Entry 299 - 2026-10-28 05:02 (edit)
+- Prompt: continue where we left and one more thing don't include dotnet test run in your scope, i will run it manually later
+- Change: Edit backend/Corrin.Tests/ServiceTests.cs
+- Outcome: approved
+
+## Entry 300 - 2026-10-28 05:02 (edit)
+- Prompt: continue where we left and one more thing don't include dotnet test run in your scope, i will run it manually later
+- Change: Edit backend/Corrin.Tests/ServiceTests.cs
+- Outcome: approved
+
+## Entry 301 - 2026-10-28 05:02 (edit)
+- Prompt: continue where we left and one more thing don't include dotnet test run in your scope, i will run it manually later
+- Change: Edit backend/Corrin.Tests/WorkOrderVisitServiceTests.cs
+- Outcome: approved
+
+## Entry 302 - 2026-10-28 05:02 (edit)
+- Prompt: continue where we left and one more thing don't include dotnet test run in your scope, i will run it manually later
+- Change: Edit backend/Corrin.Tests/WorkOrderVisitServiceTests.cs
+- Outcome: approved
+
+## Entry 303 - 2026-10-28 05:02 (edit)
+- Prompt: continue where we left and one more thing don't include dotnet test run in your scope, i will run it manually later
+- Change: Edit backend/Corrin.Tests/JobServiceBookingTests.cs
+- Outcome: approved
+
+## Entry 304 - 2026-10-28 05:02 (edit)
+- Prompt: continue where we left and one more thing don't include dotnet test run in your scope, i will run it manually later
+- Change: Edit backend/Corrin.Tests/JobServiceBookingTests.cs
+- Outcome: approved
+
+## Entry 305 - 2026-10-28 05:02 (edit)
+- Prompt: continue where we left and one more thing don't include dotnet test run in your scope, i will run it manually later
+- Change: Write backend/Corrin.Tests/JobScheduleValidatorTests.cs
+- Outcome: approved
+
+## Entry 306 - 2026-10-28 05:02 (edit)
+- Prompt: continue where we left and one more thing don't include dotnet test run in your scope, i will run it manually later
+- Change: Write backend/Corrin.Tests/LegacyJobGuardApiTests.cs
+- Outcome: approved
+
+## Entry 307 - 2026-10-28 05:03 (edit)
+- Prompt: continue where we left and one more thing don't include dotnet test run in your scope, i will run it manually later
+- Change: Edit backend/Corrin.Tests/LegacyJobGuardApiTests.cs
+- Outcome: approved
+
+## Entry 308 - 2026-10-28 05:11 (edit)
+- Prompt: test successful, continue what you think is the best
+- Change: Write ../../../tmp/traceability_table.md
+- Outcome: approved
+
+## Entry 309 - 2026-10-28 05:14 (edit)
+- Prompt: make this fast forward and finish everything within 5 minutes
+- Change: Edit CLAUDE.md
+- Outcome: approved

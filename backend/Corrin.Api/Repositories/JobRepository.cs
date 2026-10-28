@@ -20,6 +20,15 @@ public interface IJobRepository
     Task<List<JobPart>> GetPartsAsync(int jobId);
     Task<JobPart> AddPartAsync(JobPart jobPart);
     Task<List<(string Status, int Count)>> CountByStatusAsync(int? regionId);
+    Task<T> InTransactionAsync<T>(Func<Task<T>> work);
+    Task<List<(int EngineerId, int Count)>> CountScheduledByEngineerAsync(IEnumerable<int> engineerIds, DateTime from, DateTime to);
+    Task<List<(int EngineerId, string Postcode)>> GetEngineerSitePostcodesAsync(IEnumerable<int> engineerIds);
+    // Jobs booked to these engineers whose [ScheduledStart, ScheduledEnd) overlaps [from, to), excluding final statuses.
+    Task<List<Job>> GetActiveBookingsAsync(IEnumerable<int> engineerIds, DateTime from, DateTime to);
+    // Row-locks the job until the surrounding transaction ends; call inside InTransactionAsync before any plain read of the job.
+    Task LockForUpdateAsync(int id);
+    // True when the job has at least one Visit row (work-order jobs). Legacy jobs have none.
+    Task<bool> HasVisitsAsync(int jobId);
 }
 
 public class JobRepository : IJobRepository
@@ -80,6 +89,58 @@ public class JobRepository : IJobRepository
         _db.JobParts.Add(jobPart);
         await _db.SaveChangesAsync();
         return jobPart;
+    }
+
+    public async Task<List<(int EngineerId, int Count)>> CountScheduledByEngineerAsync(IEnumerable<int> engineerIds, DateTime from, DateTime to)
+    {
+        var ids = engineerIds.ToList();
+        var rows = await _db.Jobs.AsNoTracking()
+            .Where(j => j.EngineerId.HasValue && ids.Contains(j.EngineerId.Value) && j.ScheduledStart >= from && j.ScheduledStart < to && j.Status != "Cancelled")
+            .GroupBy(j => j.EngineerId)
+            .Select(g => new { EngineerId = g.Key, Count = g.Count() })
+            .ToListAsync();
+        return rows.Where(r => r.EngineerId.HasValue).Select(r => (r.EngineerId!.Value, r.Count)).ToList();
+    }
+
+    public async Task<List<Job>> GetActiveBookingsAsync(IEnumerable<int> engineerIds, DateTime from, DateTime to)
+    {
+        var ids = engineerIds.ToList();
+        string[] finalStatuses = { "Cancelled", "Completed", "NotCompleted" };
+        return await _db.Jobs.AsNoTracking()
+            .Where(j => j.EngineerId.HasValue && ids.Contains(j.EngineerId.Value)
+                && j.ScheduledStart != null && j.ScheduledStart < to
+                && j.ScheduledEnd != null && j.ScheduledEnd > from
+                && !finalStatuses.Contains(j.Status))
+            .OrderBy(j => j.ScheduledStart)
+            .ToListAsync();
+    }
+
+    // Postcodes of the sites an engineer has been assigned jobs at; used as the engineer's local area.
+    public async Task<List<(int EngineerId, string Postcode)>> GetEngineerSitePostcodesAsync(IEnumerable<int> engineerIds)
+    {
+        var ids = engineerIds.ToList();
+        var rows = await _db.Jobs.AsNoTracking()
+            .Where(j => j.EngineerId.HasValue && ids.Contains(j.EngineerId.Value))
+            .Join(_db.Sites.AsNoTracking(), j => j.SiteId, s => s.Id, (j, s) => new { j.EngineerId, s.Postcode })
+            .Distinct()
+            .ToListAsync();
+        return rows.Where(r => r.EngineerId.HasValue).Select(r => (r.EngineerId!.Value, r.Postcode)).ToList();
+    }
+
+    public async Task LockForUpdateAsync(int id) =>
+        await _db.Jobs.FromSqlInterpolated($"SELECT * FROM jobs WHERE id = {id} FOR UPDATE").AsNoTracking().ToListAsync();
+
+    public Task<bool> HasVisitsAsync(int jobId) => _db.Visits.AnyAsync(v => v.JobId == jobId);
+
+    // Runs work in one DB transaction on the shared DbContext; an exception rolls it back.
+    public async Task<T> InTransactionAsync<T>(Func<Task<T>> work)
+    {
+        // A nested call joins the transaction already open on the shared DbContext (e.g. AddPartAsync inside a visit completion).
+        if (_db.Database.CurrentTransaction is not null) return await work();
+        await using var tx = await _db.Database.BeginTransactionAsync();
+        var result = await work();
+        await tx.CommitAsync();
+        return result;
     }
 
     public async Task<List<(string Status, int Count)>> CountByStatusAsync(int? regionId)

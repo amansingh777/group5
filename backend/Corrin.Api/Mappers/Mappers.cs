@@ -1,5 +1,6 @@
 using Corrin.Api.Domain;
 using Corrin.Api.Dtos;
+using Corrin.Api.Repositories;
 
 namespace Corrin.Api.Mappers;
 
@@ -59,8 +60,26 @@ public static class Mapper
 
     public static JobNoteDto ToDto(this JobNote n) => new(n.Id, n.JobId, n.Author, n.Note, n.CreatedAt);
     public static JobPartDto ToDto(this JobPart p) => new(p.Id, p.JobId, p.PartId, p.Quantity);
+    public static VisitDto ToDto(this Visit v) => new(v.Id, v.JobId, v.EngineerId, v.VisitNo, v.ScheduledStart, v.ScheduledEnd, v.ActualStart, v.ActualEnd, v.Outcome, v.CreatedAt);
 
     public static ImportBatchDto ToDto(this ImportBatch b) => new(b.Id, b.FileName, b.ImportedAt, b.TotalRows, b.CreatedRows, b.RejectedRows);
     public static JobRequestDto ToDto(this JobRequest r) => new(r.Id, r.BatchId, r.RowNo, r.CustomerRef, r.SitePostcode, r.JobTypeCode, r.Priority,
         r.RequestedDate, r.Description, r.Result, r.RejectionReason, r.JobId);
+
+    public static DisplacedJobDto ToDisplacedDto(this Job j) => new(j.Id, j.JobRef, j.Status, j.EngineerId);
+
+    public static WorkOrderDto ToWorkOrderDto(this WorkOrderRow r, string slaState, IReadOnlyList<JobNoteDto> notes, IReadOnlyList<JobPartDto> parts) =>
+        new(r.Id, r.JobRef, r.RegionId, r.CustomerName, r.SiteName, r.SitePostcode,
+            r.AssetType is null ? null : $"{r.AssetType} {r.AssetMake} {r.AssetModel}",
+            r.JobType, r.RequiredSkill, r.Priority, r.Status, r.EngineerId, r.EngineerName,
+            r.ScheduledStart, r.ScheduledEnd, r.SlaDueAt, slaState, r.Description, r.Outcome, r.CreatedAt, notes, parts);
+
+    public static DispatchBoardJobDto ToBoardJobDto(this BoardJobRow j, string slaState, bool needsRebook) =>
+        new(j.Id, j.JobRef, j.Priority, j.Status, j.ScheduledStart, j.ScheduledEnd, slaState, needsRebook);
+}
+
+public static class ReorderRequestMapper
+{
+    public static ReorderRequestDto ToDto(this ReorderRequestRow r) => new(r.Id, r.PartId, r.PartSku, r.PartName, r.StockQty, r.ReorderLevel,
+        r.StockQty <= r.ReorderLevel, r.Status, r.ExpectedOn, r.OrderedBy, r.ReceivedBy, r.CreatedAt, r.UpdatedAt);
 }

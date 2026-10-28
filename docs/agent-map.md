@@ -8,10 +8,15 @@ Who does what when Claude Code works on this repository. Checked against `.claud
 |---|---|---|---|---|
 | `test-writer` | Haiku | Bash, Read, Edit, Write, Grep, Glob | `backend/Corrin.Tests` only | Writing and running xUnit tests (Moq service tests, `WebApplicationFactory` API tests, rolled-back DB repository tests) after a change is made |
 | `e2e-browser-check` | Haiku | Bash, Read, Grep, Glob | Nothing | Starting the API and Vite, checking API responses, driving the pages in a real browser and comparing on-screen values with expected numbers |
+| `backend-implementer` | Haiku | Bash, Read, Edit, Write, Grep, Glob | `backend/Corrin.Api` and new numbered migrations only | Implementing a scoped backend slice; builds with `dotnet build`, never runs `dotnet test`, never edits tests or existing migrations |
+| `frontend-implementer` | Haiku | Bash, Read, Edit, Write, Grep, Glob | `frontend/src` only | Implementing a scoped UI slice (typed API clients, pages, components); verifies with `npm run build` |
+| `reviewer` | Haiku | Bash, Read, Grep, Glob | Nothing | Read-only review of a diff against `docs/review-checklist.md`; ranked findings with file and line |
 
-Rules both agents follow:
+Rules the agents follow:
 - `test-writer` never touches `backend/Corrin.Api`. If a test fails because production code looks wrong, it stops and reports the failure instead of fixing it.
 - `e2e-browser-check` never edits files and must say which checks were real browser checks and which were HTTP only.
+- `backend-implementer` and `frontend-implementer` never edit tests or each other's folders. `reviewer` never edits anything and uses Bash only for read-only git commands.
+- The `test-writer` agent still runs `dotnet test` by default; the owner has asked twice for test runs to be left to them, so tell it explicitly not to run tests when that applies.
 
 ## Built-in agent types used
 

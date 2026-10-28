@@ -58,5 +58,5 @@ Field-service system for Corrin Utility Services (boiler and meter install, serv
 
 ## Claude Code setup
 - `.mcp.json` registers the read-only `mysql` MCP server from `tools/mysql-mcp`.
-- `.claude/agents/` has two Haiku project agents: `e2e-browser-check` (runs API and web, checks the page, does not edit files) and `test-writer` (edits only `backend/Corrin.Tests`).
+- `.claude/agents/` has five Haiku project agents: `e2e-browser-check` (runs API and web, checks the page, does not edit files), `test-writer` (edits only `backend/Corrin.Tests`), `backend-implementer` (edits `backend/Corrin.Api` and adds migrations, never runs tests), `frontend-implementer` (edits `frontend/src`) and `reviewer` (read-only diff review). `docs/agent-map.md` describes how they are orchestrated.
 - `.claude/settings.json` hooks log edits and commits to `docs/prompt-journal.md` and, after a commit, prompt a review of this file.

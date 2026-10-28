@@ -16,8 +16,8 @@ namespace Corrin.Tests;
 // while these transactions are open.
 //
 // Seeded facts used here: part 1 (PCB-WB-GR) has stock 6 and reorder level 3; part 17 (HP-CTRL) has stock 2 and level 2.
-// Migration 008 has already created one Open request each for parts 2 and 17, so tests that need a clean part first
-// delete that part's requests inside their own transaction.
+// The live request rows change as users work them, so tests that need a clean part first delete that part's requests
+// inside their own transaction, and no test assumes the state of rows it did not create.
 [Collection("api")]
 public class ReorderRepositoryTests : IAsyncLifetime
 {
@@ -384,9 +384,9 @@ public class ReorderRepositoryTests : IAsyncLifetime
     [Fact]
     public async Task BackfillReorderMigration_RerunOnAlreadyBackfilledData_InsertsZeroRows()
     {
-        // Seeded state after 008: parts 2 and 17 each have an Open request from the backfill.
-        Assert.Equal(1, await OpenCountAsync(2));
-        Assert.Equal(1, await OpenCountAsync(PartSeventeenId));
+        // The first run may add rows for any part at or below its level with no Open or Ordered request. That depends on the
+        // live data, so it is rolled back with the transaction. The rerun must add nothing whatever the state is.
+        await _db.Database.ExecuteSqlRawAsync(BackfillInsertSql());
 
         var inserted = await _db.Database.ExecuteSqlRawAsync(BackfillInsertSql());
 

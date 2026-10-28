@@ -8,6 +8,10 @@ namespace Corrin.Tests;
 // Runs against the seeded database. No test here persists a successful transition: the successful ordered and received
 // paths are covered by the rolled-back ReorderRepositoryTests. The POSTs below are rejected (400, 404 or 409) before any
 // row changes, and the tests check that the row is unchanged afterwards.
+//
+// The database is live, so these tests do not assume which parts are Open: a user can move a request on (for example to
+// Ordered) at any time. They take whichever Open request exists at the start of the test and fail with a clear message
+// if none does.
 [Collection("api")]
 public class ReorderApiTests
 {
@@ -23,19 +27,29 @@ public class ReorderApiTests
         return (await response.Content.ReadFromJsonAsync<PagedResult<ReorderRequestDto>>(Json))!;
     }
 
+    private async Task<ReorderRequestDto> AnyOpenRequestAsync()
+    {
+        var page = await ListAsync("?status=Open&pageSize=1");
+        Assert.NotEmpty(page.Items);
+        return page.Items[0];
+    }
+
+    private async Task<ReorderRequestDto> RowAsync(ReorderRequestDto expected)
+    {
+        var page = await ListAsync($"?partId={expected.PartId}");
+        return Assert.Single(page.Items, i => i.Id == expected.Id);
+    }
+
     private static DateOnly FutureDate => DateOnly.FromDateTime(DateTime.UtcNow).AddDays(7);
 
     [Fact]
-    public async Task List_Returns200WithTheTwoBackfilledOpenRequests()
+    public async Task List_Returns200WithItemsThatAgreeWithTheirStockLevels()
     {
         var page = await ListAsync();
 
-        Assert.Equal(2, page.Total);
-        Assert.Equal(new[] { 2, 17 }, page.Items.Select(i => i.PartId).OrderBy(id => id).ToArray());
-        Assert.All(page.Items, i => Assert.Equal("Open", i.Status));
-        Assert.All(page.Items, i => Assert.True(i.BelowReorderLevel));
-        Assert.Contains(page.Items, i => i.PartId == 2 && i.PartSku == "DV-WB-01" && i.StockQty == 1 && i.ReorderLevel == 4);
-        Assert.Contains(page.Items, i => i.PartId == 17 && i.PartSku == "HP-CTRL" && i.StockQty == 2 && i.ReorderLevel == 2);
+        Assert.True(page.Total >= page.Items.Count);
+        Assert.All(page.Items, i => Assert.False(string.IsNullOrWhiteSpace(i.PartSku)));
+        Assert.All(page.Items, i => Assert.Equal(i.StockQty <= i.ReorderLevel, i.BelowReorderLevel));
     }
 
     [Fact]
@@ -43,7 +57,7 @@ public class ReorderApiTests
     {
         var page = await ListAsync("?status=Open");
 
-        Assert.Equal(2, page.Total);
+        Assert.True(page.Total >= page.Items.Count);
         Assert.All(page.Items, i => Assert.Equal("Open", i.Status));
     }
 
@@ -77,13 +91,13 @@ public class ReorderApiTests
     [Fact]
     public async Task MarkOrdered_PastExpectedOn_Returns400AndLeavesRequestOpen()
     {
-        var open = Assert.Single((await ListAsync("?status=Open&partId=2")).Items);
+        var open = await AnyOpenRequestAsync();
 
         var response = await _client.PostAsJsonAsync($"/api/reorder-requests/{open.Id}/ordered",
             new { expectedOn = DateOnly.FromDateTime(DateTime.UtcNow).AddDays(-1), userName = "Test" });
 
         Assert.Equal(HttpStatusCode.BadRequest, response.StatusCode);
-        var after = Assert.Single((await ListAsync("?partId=2")).Items);
+        var after = await RowAsync(open);
         Assert.Equal("Open", after.Status);
         Assert.Null(after.ExpectedOn);
         Assert.Null(after.OrderedBy);
@@ -92,13 +106,13 @@ public class ReorderApiTests
     [Fact]
     public async Task MarkOrdered_MissingUserName_Returns400AndLeavesRequestOpen()
     {
-        var open = Assert.Single((await ListAsync("?status=Open&partId=17")).Items);
+        var open = await AnyOpenRequestAsync();
 
         var response = await _client.PostAsJsonAsync($"/api/reorder-requests/{open.Id}/ordered",
             new { expectedOn = FutureDate });
 
         Assert.Equal(HttpStatusCode.BadRequest, response.StatusCode);
-        var after = Assert.Single((await ListAsync("?partId=17")).Items);
+        var after = await RowAsync(open);
         Assert.Equal("Open", after.Status);
         Assert.Null(after.OrderedBy);
     }
@@ -106,19 +120,18 @@ public class ReorderApiTests
     [Fact]
     public async Task MarkReceived_OpenRequest_Returns409AndLeavesRequestAndStockUnchanged()
     {
-        var open = Assert.Single((await ListAsync("?status=Open&partId=2")).Items);
-        var stockBefore = await _client.GetFromJsonAsync<PartDto>("/api/parts/2", Json);
+        var open = await AnyOpenRequestAsync();
+        var stockBefore = await _client.GetFromJsonAsync<PartDto>($"/api/parts/{open.PartId}", Json);
 
         var response = await _client.PostAsJsonAsync($"/api/reorder-requests/{open.Id}/received",
             new { quantity = 5, userName = "Test" });
 
         Assert.Equal(HttpStatusCode.Conflict, response.StatusCode);
-        var after = Assert.Single((await ListAsync("?partId=2")).Items);
+        var after = await RowAsync(open);
         Assert.Equal("Open", after.Status);
         Assert.Null(after.ReceivedBy);
-        var stockAfter = await _client.GetFromJsonAsync<PartDto>("/api/parts/2", Json);
+        var stockAfter = await _client.GetFromJsonAsync<PartDto>($"/api/parts/{open.PartId}", Json);
         Assert.Equal(stockBefore!.StockQty, stockAfter!.StockQty);
-        Assert.Equal(1, stockAfter.StockQty);
     }
 
     [Fact]

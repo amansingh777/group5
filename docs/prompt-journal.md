@@ -1544,3 +1544,63 @@
 - Prompt: make this fast forward and finish everything within 5 minutes
 - Change: Edit CLAUDE.md
 - Outcome: approved
+
+## Entry 310 - 2026-10-28 05:15 (commit)
+- Prompt: commit everything
+- Change: commit 52a3e21 Add work-order layer: allocation, scheduling, visits, board, reorder
+- Outcome: committed
+
+## Entry 311 - 2026-10-28 05:16 (edit)
+- Prompt: write down the current agent map in docs/agent-map.md
+- Change: Write docs/agent-map.md
+- Outcome: approved
+
+## Entry 312 - 2026-10-28 05:17 (commit)
+- Prompt: commit it
+- Change: commit ed5d1a3 Add agent map documenting project agents and delivery orchestration
+- Outcome: committed
+
+## Entry 313 - 2026-10-28 05:28 (edit)
+- Prompt: commit it
+- Change: Write docs/ai-usage-reflection.md
+- Outcome: approved
+
+## Entry 314 - 2026-10-28 05:29 (edit)
+- Prompt: commit it
+- Change: Write .claude/agents/backend-implementer.md
+- Outcome: approved
+
+## Entry 315 - 2026-10-28 05:29 (edit)
+- Prompt: commit it
+- Change: Write .claude/agents/frontend-implementer.md
+- Outcome: approved
+
+## Entry 316 - 2026-10-28 05:29 (edit)
+- Prompt: commit it
+- Change: Write .claude/agents/reviewer.md
+- Outcome: approved
+
+## Entry 317 - 2026-10-28 05:29 (edit)
+- Prompt: commit it
+- Change: Edit docs/agent-map.md
+- Outcome: approved
+
+## Entry 318 - 2026-10-28 05:29 (edit)
+- Prompt: commit it
+- Change: Edit docs/ai-usage-reflection.md
+- Outcome: approved
+
+## Entry 319 - 2026-10-28 05:30 (edit)
+- Prompt: commit it
+- Change: Edit docs/agent-map.md
+- Outcome: approved
+
+## Entry 320 - 2026-10-28 05:30 (edit)
+- Prompt: commit it
+- Change: Edit CLAUDE.md
+- Outcome: approved
+
+## Entry 321 - 2026-10-28 05:30 (commit)
+- Prompt: commit it
+- Change: commit 6bcc532 Add implementer and reviewer agents from /reflect; record reflection
+- Outcome: committed

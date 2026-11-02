@@ -2,8 +2,9 @@ import { useState } from 'react'
 import { listJobs } from '../api/jobs'
 import PageState from '../components/PageState'
 import { useLoad } from '../components/useLoad'
+import { ALL_STATUSES, statusLabel } from '../components/workorders/labels'
 
-const STATUSES = ['', 'Requested', 'Scheduled', 'InProgress', 'Completed', 'Cancelled']
+const STATUSES = ['', ...ALL_STATUSES]
 
 export default function JobsPage() {
   const [status, setStatus] = useState('')
@@ -17,7 +18,7 @@ export default function JobsPage() {
         Status{' '}
         <select value={status} onChange={(e) => { setStatus(e.target.value); setPage(1) }}>
           {STATUSES.map((s) => (
-            <option key={s} value={s}>{s || 'All'}</option>
+            <option key={s} value={s}>{s ? statusLabel(s) : 'All'}</option>
           ))}
         </select>
       </label>

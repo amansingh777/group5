@@ -13,6 +13,8 @@ public interface IEngineerRepository
     Task UpdateAsync(Engineer engineer);
     Task SetSkillsAsync(int engineerId, IEnumerable<int> skillIds);
     Task<int> CountAsync();
+    // Row-locks the engineer until the surrounding transaction ends; call inside InTransactionAsync.
+    Task LockForUpdateAsync(int id);
 }
 
 public class EngineerRepository : IEngineerRepository
@@ -51,4 +53,7 @@ public class EngineerRepository : IEngineerRepository
     }
 
     public Task<int> CountAsync() => _db.Engineers.CountAsync();
+
+    public async Task LockForUpdateAsync(int id) =>
+        await _db.Engineers.FromSqlInterpolated($"SELECT * FROM engineers WHERE id = {id} FOR UPDATE").AsNoTracking().ToListAsync();
 }

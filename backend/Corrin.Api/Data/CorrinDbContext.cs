@@ -25,6 +25,8 @@ public class CorrinDbContext : DbContext
     public DbSet<JobPart> JobParts => Set<JobPart>();
     public DbSet<ImportBatch> ImportBatches => Set<ImportBatch>();
     public DbSet<JobRequest> JobRequests => Set<JobRequest>();
+    public DbSet<Visit> Visits => Set<Visit>();
+    public DbSet<ReorderRequest> ReorderRequests => Set<ReorderRequest>();
 
     protected override void OnModelCreating(ModelBuilder b)
     {
@@ -38,6 +40,13 @@ public class CorrinDbContext : DbContext
         b.Entity<Job>().HasIndex(j => j.JobRef).IsUnique();
         b.Entity<Part>().Property(p => p.UnitCost).HasPrecision(8, 2);
         b.Entity<Shift>().Ignore(s => s.RosteredHours);
+        b.Entity<Visit>().Property(v => v.Outcome).HasMaxLength(20);
+        b.Entity<Visit>().HasIndex(v => new { v.JobId, v.VisitNo }).IsUnique();
+        b.Entity<Visit>().HasIndex(v => new { v.EngineerId, v.ScheduledStart });
+        b.Entity<ReorderRequest>().Property(r => r.Status).HasMaxLength(10);
+        b.Entity<ReorderRequest>().Property(r => r.OrderedBy).HasMaxLength(80);
+        b.Entity<ReorderRequest>().Property(r => r.ReceivedBy).HasMaxLength(80);
+        b.Entity<ReorderRequest>().HasIndex(r => new { r.PartId, r.Status });
 
         foreach (var entity in b.Model.GetEntityTypes())
         {

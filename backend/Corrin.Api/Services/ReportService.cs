@@ -34,8 +34,6 @@ public class ReportService : IReportService
         var jobs = await _jobs.GetCompletedBetweenAsync(start, end, regionId);
         var shifts = await _shifts.GetBetweenAsync(from, to, engineers.Select(e => e.Id));
 
-        var periodHours = (end - start).TotalHours;
-
         var rows = new List<UtilisationRowDto>();
         foreach (var engineer in engineers)
         {
@@ -43,7 +41,7 @@ public class ReportService : IReportService
                 .Where(j => j.EngineerId == engineer.Id && j.ActualStart.HasValue && j.ActualEnd.HasValue)
                 .Sum(j => (j.ActualEnd!.Value - j.ActualStart!.Value).TotalHours);
             var rostered = shifts.Count(s => s.EngineerId == engineer.Id);
-            var available = periodHours;
+            var available = shifts.Where(s => s.EngineerId == engineer.Id).Sum(s => s.RosteredHours);
             var pct = available > 0 ? worked / available * 100 : 0;
             rows.Add(new UtilisationRowDto(engineer.Id, engineer.FullName, engineer.RegionId, rostered,
                 Math.Round(worked, 2), Math.Round(available, 2), Math.Round(pct, 1)));

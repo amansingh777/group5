@@ -7,3 +7,5 @@ dist/
 *.user
 *.log
 !docs/ci-failing-run.log
+
+.env

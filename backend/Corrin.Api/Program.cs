@@ -32,6 +32,8 @@ builder.Services.AddScoped<IEngineerRepository, EngineerRepository>();
 builder.Services.AddScoped<IShiftRepository, ShiftRepository>();
 builder.Services.AddScoped<IPartRepository, PartRepository>();
 builder.Services.AddScoped<IJobRepository, JobRepository>();
+builder.Services.AddScoped<IReorderRequestRepository, ReorderRequestRepository>();
+builder.Services.AddScoped<IVisitRepository, VisitRepository>();
 builder.Services.AddScoped<IImportRepository, ImportRepository>();
 
 builder.Services.AddScoped<IReferenceService, ReferenceService>();
@@ -42,8 +44,18 @@ builder.Services.AddScoped<IAssetService, AssetService>();
 builder.Services.AddScoped<IEngineerService, EngineerService>();
 builder.Services.AddScoped<IShiftService, ShiftService>();
 builder.Services.AddScoped<IPartService, PartService>();
+builder.Services.AddScoped<IEngineerBookingRules, EngineerBookingRules>();
 builder.Services.AddScoped<IJobService, JobService>();
+builder.Services.AddScoped<IReorderService, ReorderService>();
+builder.Services.AddScoped<IWorkOrderAllocationService, WorkOrderAllocationService>();
+builder.Services.AddScoped<IWorkOrderSchedulingService, WorkOrderSchedulingService>();
+builder.Services.AddScoped<IWorkOrderVisitService, WorkOrderVisitService>();
+builder.Services.AddScoped<IWorkOrderService, WorkOrderService>();
+builder.Services.AddScoped<IDispatchBoardService, DispatchBoardService>();
+builder.Services.AddScoped<IWorkOrderReadRepository, WorkOrderReadRepository>();
 builder.Services.AddScoped<IReportService, ReportService>();
+builder.Services.AddScoped<IFirstTimeFixRepository, FirstTimeFixRepository>();
+builder.Services.AddScoped<IFirstTimeFixService, FirstTimeFixService>();
 builder.Services.AddScoped<IJobRequestImportService, JobRequestImportService>();
 
 var upgrader = DeployChanges.To
